@@ -1,0 +1,5 @@
+export *  from './CTASection'
+export  * from './HeroSection'
+export * from './QuoteSection'
+export * from './ServiceSection'
+export * from './TeamSection'

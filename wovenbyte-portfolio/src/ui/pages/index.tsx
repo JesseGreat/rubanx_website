@@ -1,0 +1,6 @@
+export * from './Home'
+export * from './About'
+export * from './Contact'
+export * from './Impact'
+export * from './Partners'
+export * from './Solutions'

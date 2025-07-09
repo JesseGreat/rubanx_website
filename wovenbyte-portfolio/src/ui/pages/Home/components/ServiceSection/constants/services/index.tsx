@@ -18,7 +18,7 @@ export const services: Service[] = [
     {
       id: 'housing-tools',
       title: 'Affordable Housing Tools',
-      description: 'Helping users find affordable housing options closer to the city with smart filtering and comprehensive listings.',
+      description: 'Connecting house seekers directly to the landlord breaking the agent trauma problem',
       icon: <Search className="text-orange-500" size={32} />,
       image: '/api/placeholder/400/300',
       buttonText: 'Explore Housing'

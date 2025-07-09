@@ -12,66 +12,17 @@ import {
   ExternalLink
 } from 'lucide-react';
 import { AppLayout } from '@/ui/modules';
+import { solutions } from './data';
+import { useRouter } from 'next/navigation';
 
-
-// Solutions Page Component
 export const SolutionsPage: React.FC = () => {
-  const solutions = [
-    {
-      id: 'magic-ride',
-      title: 'Magic Ride',
-      description: 'Revolutionizing urban commute with efficiency and ease.',
-      icon: <Smartphone className="text-orange-500" size={48} />,
-      buttonText: 'Join Waitlist',
-      status: 'In Development',
-      problem: 'Commuters in bustling African cities often face significant struggles finding reliable and affordable transportation after work, leading to frustrating delays, immense stress, and sometimes even conflicts at crowded pick-up points.',
-      solution: 'Magic Ride offers a groundbreaking solution by allowing users to book scheduled rides with others heading the same route well in advance. This ensures timely travel, reduces individual costs, and transforms the daily commute into a predictable and stress-free experience.',
-      features: [
-        'Find & book ahead with ease',
-        'Communicate with driver and co-riders directly in-app',
-        'Enjoy a low-cost, shared economic model',
-        'Real-time tracking and estimated arrival times'
-      ]
-    },
-    {
-      id: 'housing-tools',
-      title: 'Affordable Housing Tool',
-      description: 'Connecting urban dwellers with suitable and sustainable living spaces.',
-      icon: <Search className="text-orange-500" size={48} />,
-      buttonText: 'Coming Soon',
-      status: 'Upcoming',
-      problem: 'Finding affordable and decent housing close to urban centers is a major hurdle for many, forcing long, exhausting commutes and impacting quality of life.',
-      solution: 'Our Housing Tool simplifies the search for suitable and affordable housing options. It allows users to smartly filter listings by budget, desired location, proximity to work, and various amenities, bringing ideal homes within reach.',
-      features: [
-        'Smart filtering by budget, location, and proximity',
-        'Verified listings from trusted landlords',
-        'In-app virtual tours and booking appointments',
-        'Community reviews and ratings for transparency'
-      ]
-    },
-    {
-      id: 'urban-platform',
-      title: 'Urban Resource Platform',
-      description: 'Your gateway to essential city services, made simple.',
-      icon: <Monitor className="text-orange-500" size={48} />,
-      buttonText: 'Learn More',
-      status: 'Upcoming',
-      problem: 'Accessing essential city services like health, education, and public utilities can be fragmented and challenging, requiring multiple trips and long waits.',
-      solution: 'The Urban Resource Platform is a unified digital hub designed to streamline access to critical city services. From healthcare appointments to educational resources and utility payments, residents can access everything easily from one intuitive platform.',
-      features: [
-        'Unified access to diverse city services',
-        'Real-time updates on service availability',
-        'Secure digital payments for utility bills',
-        'Personalized recommendations for local resources'
-      ]
-    }
-  ];
+const router = useRouter()
 
   return (
     <AppLayout>
       {/* Hero Section */}
       <section className="py-32 bg-gradient-to-br from-orange-50 via-white to-orange-100">
-        <div className="container mx-auto px-4 text-center">
+        <div className="container pt-[100px] px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
@@ -292,17 +243,19 @@ export const SolutionsPage: React.FC = () => {
                   </div>
                   
                   <motion.button
-                    className={`inline-flex items-center px-8 py-4 text-lg font-medium rounded-lg transition-colors duration-200 ${
-                      solution.status === 'In Development' 
-                        ? 'bg-orange-500 text-white hover:bg-orange-600' 
-                        : 'bg-gray-100 text-gray-700 hover:bg-orange-500 hover:text-white'
-                    }`}
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    {solution.buttonText}
-                    <ArrowRight size={20} className="ml-2" />
-                  </motion.button>
+  disabled={solution.status !== 'In Development'} 
+  className={`inline-flex items-center px-8 py-4 text-lg font-medium rounded-lg transition-colors duration-200 ${
+    solution.status === 'In Development'
+      ? 'bg-orange-500 text-white hover:bg-orange-600 cursor-pointer'
+      : 'bg-gray-100 text-gray-400 cursor-not-allowed'
+  }`}
+  whileHover={solution.status === 'In Development' ? { scale: 1.05 } : {}}
+  whileTap={solution.status === 'In Development' ? { scale: 0.95 } : {}}
+>
+  {solution.buttonText}
+  <ArrowRight size={20} className="ml-2" />
+</motion.button>
+
                 </div>
               </motion.div>
             ))}
@@ -328,15 +281,17 @@ export const SolutionsPage: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <motion.button
-                className="bg-white text-orange-500 px-8 py-4 text-lg font-medium rounded-lg hover:bg-gray-100 transition-colors inline-flex items-center"
+                onClick={() => window.open("https://calendly.com/wovenbyte/30min", "_blank")}
+                className="bg-white cursor-pointer text-orange-500 px-8 py-4 text-lg font-medium rounded-lg hover:bg-gray-100 transition-colors inline-flex items-center"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <Calendar size={20} className="mr-2" />
-                Schedule a Demo
+                <Calendar size={20} className="mr-2 " />
+                Schedule a Meeting
               </motion.button>
               <motion.button
-                className="border-2 border-white text-white px-8 py-4 text-lg font-medium rounded-lg hover:bg-white hover:text-orange-500 transition-colors inline-flex items-center"
+                onClick={() => router.push('/impact')}
+                className="border-2 cursor-pointer border-white text-white px-8 py-4 text-lg font-medium rounded-lg hover:bg-white hover:text-orange-500 transition-colors inline-flex items-center"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >

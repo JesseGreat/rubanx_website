@@ -3,12 +3,12 @@ import { MessageCircle, Phone } from "lucide-react";
 export const contactInfo = [
     {
       icon: Phone,
-      text: '+234 800 123 4567',
-      href: 'tel:+2348001234567'
+      text: '+2348141215567',
+      href: 'tel:+23481412155 67'
     },
     {
       icon: MessageCircle,
-      text: 'hello@wovenbyte.com',
-      href: 'mailto:hello@wovenbyte.com'
+      text: 'info@wovenbyte.org',
+      href: 'mailto:info@wovenbyte.org'
     }
   ];

@@ -44,9 +44,11 @@ export const Header: React.FC = () => {
               onClick={() => handlePageChange('home')}
             >
               <Image 
-                src="/logo.png" // Replace with your actual logo path
+              width={400}
+              height={400}
+                src="/logo.jpeg" // Replace with your actual logo path
                 alt="WovenByte Logo"
-                className="h-8 w-auto"
+                className="h-[100px] w-auto"
               />
             </motion.div>
   
@@ -58,7 +60,7 @@ export const Header: React.FC = () => {
   
             {/* Desktop Schedule Button */}
             <div className="hidden md:block">
-            <Button className="flex items-center">
+            <Button     onClick={() => window.open("https://calendly.com/wovenbyte/30min", "_blank")} className="flex items-center">
               <Calendar size={18} className="mr-2" />
               Schedule Meeting
             </Button> 

@@ -53,10 +53,13 @@ export const MobileNavigation: React.FC<{
               
               {/* Mobile Schedule Button */}
               <motion.div className="pt-4">
-                <Button className="w-full flex items-center justify-center">
-                  <Calendar size={18} className="mr-2" />
-                  Schedule Meeting
-                </Button>
+              <Button
+  onClick={() => window.open("https://calendly.com/wovenbyte/30min", "_blank")}
+  className="w-full flex items-center justify-center"
+>
+  <Calendar size={18} className="mr-2" />
+  Schedule Meeting
+</Button>
               </motion.div>
             </div>
           </motion.div>

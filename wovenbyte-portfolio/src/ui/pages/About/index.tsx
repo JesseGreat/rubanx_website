@@ -4,85 +4,18 @@ import { motion } from 'framer-motion';
 import { 
   Building,
   Globe,
-  Users,
-  Target,
- 
-  MapPin,
+
   Calendar,
-  TrendingUp
+  
 } from 'lucide-react';
 
 import { Card, PageHero, Section, staggerContainer, Button, AppLayout } from '@/ui/modules';
-import { coreValues } from './constants';
+import { coreValues, milestones, team } from './constants';
+import { useRouter } from 'next/navigation';
 
-// Additional data for the enhanced about page
-const milestones = [
-  {
-    year: "2023",
-    title: "Company Founded",
-    description: "WovenByte was established with a vision to transform African cities through technology"
-  },
-  {
-    year: "2024",
-    title: "First Solution Launch",
-    description: "Launched our first urban mobility platform serving Lagos metropolitan area"
-  },
-  {
-    year: "2025",
-    title: "Expansion Phase",
-    description: "Expanding our solutions to multiple Nigerian cities and exploring new markets"
-  }
-];
-
-const stats = [
-  {
-    icon: Users,
-    number: "10,000+",
-    label: "Users Served",
-    description: "Citizens using our platforms"
-  },
-  {
-    icon: MapPin,
-    number: "5",
-    label: "Cities",
-    description: "Active in major Nigerian cities"
-  },
-  {
-    icon: Building,
-    number: "100+",
-    label: "Partners",
-    description: "Government and private partnerships"
-  },
-  {
-    icon: TrendingUp,
-    number: "95%",
-    label: "Satisfaction Rate",
-    description: "User satisfaction with our solutions"
-  }
-];
-
-const team = [
-  {
-    name: "Founder & CEO",
-    role: "Visionary Leader",
-    description: "Leading the charge in urban innovation across Africa",
-    icon: Target
-  },
-  {
-    name: "Engineering Team",
-    role: "Tech Innovators",
-    description: "Building scalable solutions for complex urban challenges",
-    icon: Building
-  },
-  {
-    name: "Urban Planners",
-    role: "City Experts",
-    description: "Understanding and solving real-world urban problems",
-    icon: MapPin
-  }
-];
 
 export const AboutPage: React.FC = () => {
+  const router = useRouter();
   return (
     <AppLayout>
       <PageHero 
@@ -97,14 +30,24 @@ export const AboutPage: React.FC = () => {
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+          
           >
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">It Started With A Commute.</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Founder’s Story – WovenByte</h2>
             <p className="text-lg text-gray-600 leading-relaxed mb-6">
-              During my National Youth Service Corps (NYSC), I was posted to a government office in a busy Nigerian city. Like many others, I couldn&apos;t afford to live in the urban center. I lived far away and every evening, I joined crowds fighting for space in taxis and buses. I saw civil servants pushed, stressed, and exhausted.
+            During my NYSC service year in Abuja, I experienced the harsh realities many young Nigerians and urban dwellers face daily. Living far from the city center because I couldn’t afford the high rent, I had to endure long, exhausting commutes every day. Mornings were battles—fighting through crowded junctions just to secure a ride. Evenings weren’t any better, filled with dragging, waiting, and even altercations just to get home. The stress affected productivity, well-being, and quality of life—not just for me, but for thousands of workers, students, and market traders.
+
+But it didn’t stop there.
+
+When I tried to get closer to the city by looking for a better apartment, another layer of frustration unfolded. I had to deal with unreliable agents who inflated rent prices, added hidden charges, and complicated the entire process—all without the knowledge or consent of landlords. Finding a decent, affordable place felt like navigating a maze of exploitation.
+
+These two personal challenges—mobility and housing—revealed a deeper truth: urban living in Africa is broken for the everyday person.
+
+
             </p>
             <p className="text-lg text-gray-600 leading-relaxed">
-              That frustration birthed the idea for WovenByte – a company that would solve transport and housing challenges with technology, making African cities more livable for everyone.
+            That’s why I founded WovenByte—to create practical, people-centered solutions that make city life easier and more accessible for everyone. Our first product, Magic Ride, tackles the transportation crisis by letting commuters pre-book shared rides with verified drivers. But we're not stopping there. We’re also building platforms that connect house seekers directly with landlords, reduce middleman exploitation, and improve access to urban services across Africa.
+
+WovenByte is not just a tech company. It’s a movement to redefine urban living. We’re weaving smarter, fairer, more inclusive cities—starting from lived experience.
             </p>
           </motion.div>
           <motion.div
@@ -191,40 +134,7 @@ export const AboutPage: React.FC = () => {
         </motion.div>
       </Section>
 
-      {/* Impact Statistics */}
-      <Section background="gray">
-        <motion.div
-          className="text-center mb-16"
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-        >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Our Impact</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Measuring success through the positive changes we bring to African cities and their citizens.
-          </p>
-        </motion.div>
 
-        <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
-          variants={staggerContainer}
-          initial="initial"
-          whileInView="animate"
-          viewport={{ once: true }}
-        >
-          {stats.map((stat, index) => (
-            <Card key={index} className="text-center p-6">
-              <div className="flex justify-center mb-4">
-                <stat.icon size={48} className="text-orange-500" />
-              </div>
-              <h3 className="text-3xl font-bold text-gray-900 mb-2">{stat.number}</h3>
-              <h4 className="text-lg font-semibold text-orange-500 mb-2">{stat.label}</h4>
-              <p className="text-gray-600 text-sm">{stat.description}</p>
-            </Card>
-          ))}
-        </motion.div>
-      </Section>
 
       {/* Journey Timeline */}
       <Section>
@@ -326,10 +236,10 @@ export const AboutPage: React.FC = () => {
             we&apos;d love to collaborate with you in creating smarter, more inclusive African cities.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-orange-500 hover:bg-orange-600">
+            <Button onClick={()=> router.push('/partners')} size="lg" className="bg-orange-500 hover:bg-orange-600">
               Partner With Us
             </Button>
-            <Button size="lg" variant="outline">
+            <Button  onClick={()=> router.push('/solutions')} size="lg" variant="outline">
               Learn About Our Solutions
             </Button>
           </div>

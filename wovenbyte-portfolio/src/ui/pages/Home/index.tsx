@@ -10,7 +10,7 @@ import { AppLayout } from "@/ui/modules";
           <HeroSection />
           <ServicesSection />
           <QuoteSection />
-          <TeamSection />
+        
           <CTASection />
         </AppLayout>
       );

@@ -6,6 +6,8 @@ import {
     Lightbulb,
     Heart,
     Target,
+    Building,
+    MapPin,
  
   } from 'lucide-react';
 import { CoreValue } from '../../types';
@@ -38,3 +40,48 @@ export const coreValues: CoreValue[] = [
     icon: <Shield className="text-orange-500" size={32} />
   }
 ];   
+
+
+
+
+// Additional data for the enhanced about page
+export const milestones = [
+  {
+    year: "2023",
+    title: "Company Founded",
+    description: "WovenByte was established with a vision to transform African cities through technology"
+  },
+  {
+    year: "2024",
+    title: "First Solution Launch",
+    description: "Launched our first urban mobility platform serving Lagos metropolitan area"
+  },
+  {
+    year: "2025",
+    title: "Expansion Phase",
+    description: "Expanding our solutions to multiple Nigerian cities and exploring new markets"
+  }
+];
+
+
+
+export const team = [
+  {
+    name: "Founder & CEO",
+    role: "Visionary Leader",
+    description: "Leading the charge in urban innovation across Africa",
+    icon: Target
+  },
+  {
+    name: "Engineering Team",
+    role: "Tech Innovators",
+    description: "Building scalable solutions for complex urban challenges",
+    icon: Building
+  },
+  {
+    name: "Urban Planners",
+    role: "City Experts",
+    description: "Understanding and solving real-world urban problems",
+    icon: MapPin
+  }
+];

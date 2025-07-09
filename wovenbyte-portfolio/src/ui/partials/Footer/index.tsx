@@ -10,6 +10,7 @@ import {
 import { contactInfo } from './constants/contactInfo';
 import { handleNavigation } from './utils';
 import { navLinks } from './constants';
+import Image from 'next/image';
 
 
 
@@ -28,13 +29,19 @@ export const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Company Info */}
           <div>
-            <h3 className="text-2xl font-bold mb-4">WovenByte</h3>
+          <Image
+              width={400}
+              height={400}
+                src="/logo.jpeg" // Replace with your actual logo path
+                alt="WovenByte Logo"
+                className="h-[100px] mb-6 w-auto"
+              />
             <p className="text-gray-400 mb-4">
               Building scalable solutions to real-life city problems through innovative technology.
             </p>
             <div className="flex items-center space-x-2 text-gray-400">
               <MapPin size={16} />
-              <span>Lagos, Nigeria</span>
+              <span>Abuja, Nigeria</span>
             </div>
           </div>
 

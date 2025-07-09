@@ -34,60 +34,60 @@ export const ImpactPage: React.FC = () => {
     }
   ];
 
-  const impactMetrics = [
-    {
-      icon: Users,
-      number: "50,000+",
-      label: "Lives Improved",
-      description: "Citizens benefiting from our mobility solutions",
-      growth: "+150%"
-    },
-    {
-      icon: Clock,
-      number: "2.5M",
-      label: "Hours Saved",
-      description: "Reduced commute time through smart routing",
-      growth: "+200%"
-    },
-    {
-      icon: TrendingUp,
-      number: "$15M",
-      label: "Economic Value",
-      description: "Generated through productivity improvements",
-      growth: "+180%"
-    },
-    {
-      icon: Building,
-      number: "12",
-      label: "City Partnerships",
-      description: "Active collaborations with local governments",
-      growth: "+300%"
-    }
-  ];
+  // const impactMetrics = [
+  //   {
+  //     icon: Users,
+  //     number: "50,000+",
+  //     label: "Lives Improved",
+  //     description: "Citizens benefiting from our mobility solutions",
+  //     growth: "+150%"
+  //   },
+  //   {
+  //     icon: Clock,
+  //     number: "2.5M",
+  //     label: "Hours Saved",
+  //     description: "Reduced commute time through smart routing",
+  //     growth: "+200%"
+  //   },
+  //   {
+  //     icon: TrendingUp,
+  //     number: "$15M",
+  //     label: "Economic Value",
+  //     description: "Generated through productivity improvements",
+  //     growth: "+180%"
+  //   },
+  //   {
+  //     icon: Building,
+  //     number: "12",
+  //     label: "City Partnerships",
+  //     description: "Active collaborations with local governments",
+  //     growth: "+300%"
+  //   }
+  // ];
 
-  const successStories = [
-    {
-      title: "Lagos Transport Revolution",
-      description: "Reduced average commute time by 35% through intelligent route optimization and real-time traffic management.",
-      impact: "150,000 daily users",
-      icon: MapPin,
-      metrics: ["35% time reduction", "150K users", "₦2.8B savings"]
-    },
-    {
-      title: "Abuja Housing Connect",
-      description: "Connected 10,000+ families with affordable housing options through our digital platform.",
-      impact: "10,000+ families housed",
-      icon: Building,
-      metrics: ["10K+ families", "40% cost reduction", "95% satisfaction"]
-    },
-    {
-      title: "Port Harcourt Smart Services",
-      description: "Digitized municipal services, reducing bureaucratic delays by 60% and improving citizen satisfaction.",
-      impact: "60% faster services",
-      icon: Zap,
-      metrics: ["60% faster", "25K+ services", "4.8/5 rating"]
-    }
-  ];
+  // const successStories = [
+  //   {
+  //     title: "Lagos Transport Revolution",
+  //     description: "Reduced average commute time by 35% through intelligent route optimization and real-time traffic management.",
+  //     impact: "150,000 daily users",
+  //     icon: MapPin,
+  //     metrics: ["35% time reduction", "150K users", "₦2.8B savings"]
+  //   },
+  //   {
+  //     title: "Abuja Housing Connect",
+  //     description: "Connected 10,000+ families with affordable housing options through our digital platform.",
+  //     impact: "10,000+ families housed",
+  //     icon: Building,
+  //     metrics: ["10K+ families", "40% cost reduction", "95% satisfaction"]
+  //   },
+  //   {
+  //     title: "Port Harcourt Smart Services",
+  //     description: "Digitized municipal services, reducing bureaucratic delays by 60% and improving citizen satisfaction.",
+  //     impact: "60% faster services",
+  //     icon: Zap,
+  //     metrics: ["60% faster", "25K+ services", "4.8/5 rating"]
+  //   }
+  // ];
 
   const sustainabilityGoals = [
     {
@@ -124,7 +124,7 @@ export const ImpactPage: React.FC = () => {
       />
 
       {/* Impact Metrics */}
-      <Section>
+      {/* <Section>
         <motion.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: 40 }}
@@ -162,10 +162,10 @@ export const ImpactPage: React.FC = () => {
             </Card>
           ))}
         </motion.div>
-      </Section>
+      </Section> */}
 
       {/* Success Stories */}
-      <Section background="gray">
+      {/* <Section background="gray">
         <motion.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: 40 }}
@@ -211,7 +211,7 @@ export const ImpactPage: React.FC = () => {
             </Card>
           ))}
         </motion.div>
-      </Section>
+      </Section> */}
 
       {/* Urban Stats & Growth Projections */}
       <Section>
@@ -417,14 +417,11 @@ export const ImpactPage: React.FC = () => {
             partner, or collaborate, we have opportunities that align with your goals and values.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-orange-500 hover:bg-orange-600 flex items-center">
+            <Button onClick={() => window.open("https://docs.google.com/forms/d/1M2_D99qXr7iMYv2zE31m_3Tq7Bn56a3NSXSuiM-cIL8/preview", "_blank")} size="lg" className="bg-orange-500 cursor-pointer hover:bg-orange-600 flex items-center">
               Become a Partner
               <ArrowRight className="ml-2" size={20} />
             </Button>
-            <Button size="lg" variant="outline" className="flex items-center">
-              View Impact Report
-              <Shield className="ml-2" size={20} />
-            </Button>
+        
           </div>
         </motion.div>
       </Section>

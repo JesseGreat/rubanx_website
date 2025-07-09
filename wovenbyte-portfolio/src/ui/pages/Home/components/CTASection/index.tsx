@@ -6,7 +6,7 @@ import { scaleOnHover } from '@/ui/modules';
 
 export const CTASection = () => {
     return (
-      <section id="contact" className="py-20 bg-gradient-to-r from-orange-500 to-orange-600">
+      <section id="contact" className="py-20">
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center text-white"
@@ -15,14 +15,15 @@ export const CTASection = () => {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            <h2 className="text-4xl text-orange-500 md:text-5xl font-bold mb-6">
               Be part of the urban transformation.
             </h2>
-            <p className="text-xl mb-8 max-w-2xl mx-auto opacity-90">
+            <p className="text-xl mb-8 text-orange-500 max-w-2xl mx-auto opacity-90">
               Join us in building smarter, more sustainable cities for the future. Let&apos;s create solutions that matter.
             </p>
             <motion.button
-              className="bg-white text-orange-500 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors inline-flex items-center space-x-2"
+             onClick={() => window.open("https://calendly.com/wovenbyte/30min", "_blank")}
+              className="bg-orange-500 text-white cursor-pointer px-8 py-4 rounded-lg font-semibold text-lg  transition-colors inline-flex items-center space-x-2"
               {...scaleOnHover}
             >
               <Calendar size={20} />

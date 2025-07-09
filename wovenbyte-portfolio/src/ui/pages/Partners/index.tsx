@@ -340,7 +340,7 @@ export const PartnersPage: React.FC = () => {
       </Section>
 
       {/* Success Stories */}
-      <Section>
+      {/* <Section>
         <motion.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: 40 }}
@@ -388,10 +388,10 @@ export const PartnersPage: React.FC = () => {
             </Card>
           ))}
         </motion.div>
-      </Section>
+      </Section> */}
 
       {/* Partners Grid */}
-      <Section background="gray">
+      {/* <Section background="gray">
         <motion.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: 40 }}
@@ -405,7 +405,7 @@ export const PartnersPage: React.FC = () => {
           </p>
         </motion.div>
 
-        {/* Filter Buttons */}
+      
         <div className="flex flex-wrap justify-center gap-2 mb-12">
           {filterCategories.map((category) => (
             <button
@@ -470,7 +470,7 @@ export const PartnersPage: React.FC = () => {
             </motion.div>
           ))}
         </motion.div>
-      </Section>
+      </Section> */}
 
       {/* Partnership Benefits */}
       <Section>
@@ -560,11 +560,11 @@ export const PartnersPage: React.FC = () => {
             innovative technology and sustainable development. Together, we can create lasting change.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-orange-500 hover:bg-orange-600 flex items-center">
-              <Handshake size={20} className="mr-2" />
+            <Button size="lg" className="bg-orange-500 cursor-pointer hover:bg-orange-600 flex items-center">
+              <Handshake  onClick={() => window.open("https://docs.google.com/forms/d/1M2_D99qXr7iMYv2zE31m_3Tq7Bn56a3NSXSuiM-cIL8/preview", "_blank")} size={20} className="mr-2" />
               Become a Partner
             </Button>
-            <Button size="lg" variant="outline" className="flex items-center">
+            <Button   onClick={() => window.open("https://calendly.com/wovenbyte/30min", "_blank")} size="lg" variant="outline" className="flex cursor-pointer items-center">
               <Calendar size={20} className="mr-2" />
               Schedule a Consultation
             </Button>

@@ -97,15 +97,59 @@ export const ContactPage: React.FC = () => {
 
       {/* Main Contact Section */}
       <Section background="gray">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-          {/* Contact Form */}
+        <div className="grid grid-cols-1 lg:grid-cols-1 gap-16">
+        
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <Card className="p-8">
+              {/* Office Hours */}
+              <Card className="p-6">
+              <div className="flex items-center mb-4">
+                <Clock className="text-orange-500 mr-3" size={24} />
+                <h3 className="text-xl font-bold text-gray-900">Business Hours</h3>
+              </div>
+              <div className="space-y-2 text-gray-600">
+                <div className="flex justify-between">
+                  <span>Monday - Friday</span>
+                  <span className="font-medium">9:00 AM - 6:00 PM</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Saturday</span>
+                  <span className="font-medium">10:00 AM - 4:00 PM</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Sunday</span>
+                  <span className="font-medium">Closed</span>
+                </div>
+                <div className="mt-4 p-3 bg-orange-50 rounded-lg">
+                  <p className="text-sm text-orange-700">
+                    <strong>Note:</strong> Emergency support available 24/7 for existing clients
+                  </p>
+                </div>
+              </div>
+           
+              <h3 className="text-xl mt-6 font-bold text-gray-900 mb-4">Follow Us</h3>
+              <p className="text-gray-600 mb-4">Stay updated with our latest news and insights</p>
+              <div className="flex space-x-4">
+                {socialLinks.map((social, index) => (
+                  <a
+                    key={index}
+                    href={social.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-gray-600 transition-colors ${social.color}`}
+                  >
+                    <social.icon size={20} />
+                  </a>
+                ))}
+              </div>
+         
+            </Card>
+
+            {/* <Card className="p-8">
               {!isSubmitted ? (
                 <>
                   <h2 className="text-3xl font-bold text-gray-900 mb-6">Send Us a Message</h2>
@@ -264,7 +308,7 @@ export const ContactPage: React.FC = () => {
                   </Button>
                 </div>
               )}
-            </Card>
+            </Card> */}
           </motion.div>
 
           {/* Contact Info & Additional Content */}
@@ -275,54 +319,13 @@ export const ContactPage: React.FC = () => {
             viewport={{ once: true }}
             className="space-y-8"
           >
-            {/* Office Hours */}
-            <Card className="p-6">
-              <div className="flex items-center mb-4">
-                <Clock className="text-orange-500 mr-3" size={24} />
-                <h3 className="text-xl font-bold text-gray-900">Business Hours</h3>
-              </div>
-              <div className="space-y-2 text-gray-600">
-                <div className="flex justify-between">
-                  <span>Monday - Friday</span>
-                  <span className="font-medium">9:00 AM - 6:00 PM</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Saturday</span>
-                  <span className="font-medium">10:00 AM - 4:00 PM</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Sunday</span>
-                  <span className="font-medium">Closed</span>
-                </div>
-                <div className="mt-4 p-3 bg-orange-50 rounded-lg">
-                  <p className="text-sm text-orange-700">
-                    <strong>Note:</strong> Emergency support available 24/7 for existing clients
-                  </p>
-                </div>
-              </div>
-            </Card>
+          
 
             {/* Social Media */}
-            <Card className="p-6">
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Follow Us</h3>
-              <p className="text-gray-600 mb-4">Stay updated with our latest news and insights</p>
-              <div className="flex space-x-4">
-                {socialLinks.map((social, index) => (
-                  <a
-                    key={index}
-                    href={social.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-gray-600 transition-colors ${social.color}`}
-                  >
-                    <social.icon size={20} />
-                  </a>
-                ))}
-              </div>
-            </Card>
+        
 
             {/* Quick Actions */}
-            <Card className="p-6">
+            {/* <Card className="p-6">
               <h3 className="text-xl font-bold text-gray-900 mb-4">Quick Actions</h3>
               <div className="space-y-3">
                 <Button variant="outline" className="w-full justify-between">
@@ -338,10 +341,10 @@ export const ContactPage: React.FC = () => {
                   <ArrowRight size={16} />
                 </Button>
               </div>
-            </Card>
+            </Card> */}
           </motion.div>
         </div>
-      </Section>
+      </Section> 
 
       {/* Office Locations */}
       <Section>
@@ -352,7 +355,7 @@ export const ContactPage: React.FC = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Our Offices</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Our Office</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Visit us at any of our locations across Nigeria for in-person consultations.
           </p>
@@ -381,7 +384,7 @@ export const ContactPage: React.FC = () => {
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">{office.city}</h3>
               <p className="text-gray-600 mb-3">{office.address}</p>
-              <p className="text-sm text-gray-500">{office.description}</p>
+              {/* <p className="text-sm text-gray-500">{office.description}</p> */}
             </Card>
           ))}
         </motion.div>

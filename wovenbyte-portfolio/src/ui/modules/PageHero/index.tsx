@@ -5,7 +5,7 @@ export const PageHero: React.FC<{
     background?: string;
   }> = ({ title, subtitle, background = 'bg-gradient-to-br from-orange-50 via-white to-orange-100' }) => {
     return (
-      <section className={`py-32 ${background}`}>
+      <section className={`py-[100px] mt-[120px]  ${background}`}>
         <div className="container mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 40 }}

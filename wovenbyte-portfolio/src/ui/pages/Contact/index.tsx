@@ -55,7 +55,7 @@ export const ContactPage: React.FC = () => {
     <AppLayout>
       <PageHero
         title="Get in Touch"
-        subtitle="Ready to transform your city? Let's start a conversation about building smarter, more connected urban communities."
+        subtitle="Ready to transform your city? Let&apos;s start a conversation about building smarter, more connected urban communities."
       />
 
       {/* Contact Methods */}
@@ -69,7 +69,7 @@ export const ContactPage: React.FC = () => {
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Multiple Ways to Connect</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Choose the communication method that works best for you. We're here to help!
+            Choose the communication method that works best for you. We&apos;re here to help!
           </p>
         </motion.div>
 
@@ -110,7 +110,7 @@ export const ContactPage: React.FC = () => {
                 <>
                   <h2 className="text-3xl font-bold text-gray-900 mb-6">Send Us a Message</h2>
                   <p className="text-gray-600 mb-8">
-                    Fill out the form below and we'll get back to you as soon as possible.
+                    Fill out the form below and we&apos;ll get back to you as soon as possible.
                   </p>
                   
                   <form onSubmit={handleSubmit} className="space-y-6">
@@ -179,7 +179,7 @@ export const ContactPage: React.FC = () => {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div>
                         <label className="block text-sm font-medium text-gray-700 mb-2">
-                          I'm reaching out as a
+                          I&apos;m reaching out as a
                         </label>
                         <select
                           name="category"
@@ -257,7 +257,7 @@ export const ContactPage: React.FC = () => {
                   </div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">Message Sent Successfully!</h3>
                   <p className="text-gray-600 mb-6">
-                    Thank you for reaching out. We'll get back to you within 24 hours.
+                    Thank you for reaching out. We&apos;ll get back to you within 24 hours.
                   </p>
                   <Button onClick={() => setIsSubmitted(false)} variant="outline">
                     Send Another Message

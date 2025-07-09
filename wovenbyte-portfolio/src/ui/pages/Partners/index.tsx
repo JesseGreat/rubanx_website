@@ -18,8 +18,7 @@ import {
   Zap,
   Shield,
   Calendar,
-  Star,
-  Filter
+  Star
 } from "lucide-react";
 
 import { AppLayout, Button, Card, fadeInUp, PageHero, Section, staggerContainer } from "@/ui/modules";
@@ -402,7 +401,7 @@ export const PartnersPage: React.FC = () => {
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Trusted by Leading Organizations</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            We're proud to work with these exceptional organizations driving change across Africa.
+            We&apos;re proud to work with these exceptional organizations driving change across Africa.
           </p>
         </motion.div>
 

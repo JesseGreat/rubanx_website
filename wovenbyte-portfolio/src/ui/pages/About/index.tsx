@@ -6,7 +6,7 @@ import {
   Globe,
   Users,
   Target,
-  Award,
+ 
   MapPin,
   Calendar,
   TrendingUp
@@ -101,7 +101,7 @@ export const AboutPage: React.FC = () => {
           >
             <h2 className="text-4xl font-bold text-gray-900 mb-6">It Started With A Commute.</h2>
             <p className="text-lg text-gray-600 leading-relaxed mb-6">
-              During my National Youth Service Corps (NYSC), I was posted to a government office in a busy Nigerian city. Like many others, I couldn't afford to live in the urban center. I lived far away and every evening, I joined crowds fighting for space in taxis and buses. I saw civil servants pushed, stressed, and exhausted.
+              During my National Youth Service Corps (NYSC), I was posted to a government office in a busy Nigerian city. Like many others, I couldn&apos;t afford to live in the urban center. I lived far away and every evening, I joined crowds fighting for space in taxis and buses. I saw civil servants pushed, stressed, and exhausted.
             </p>
             <p className="text-lg text-gray-600 leading-relaxed">
               That frustration birthed the idea for WovenByte – a company that would solve transport and housing challenges with technology, making African cities more livable for everyone.
@@ -322,8 +322,8 @@ export const AboutPage: React.FC = () => {
             Join Us in Building Better Cities
           </h2>
           <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-            Whether you're a city government, a business partner, or a citizen who shares our vision, 
-            we'd love to collaborate with you in creating smarter, more inclusive African cities.
+            Whether you&apos;re a city government, a business partner, or a citizen who shares our vision, 
+            we&apos;d love to collaborate with you in creating smarter, more inclusive African cities.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="bg-orange-500 hover:bg-orange-600">

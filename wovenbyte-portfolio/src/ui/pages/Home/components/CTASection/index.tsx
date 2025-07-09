@@ -19,7 +19,7 @@ export const CTASection = () => {
               Be part of the urban transformation.
             </h2>
             <p className="text-xl mb-8 max-w-2xl mx-auto opacity-90">
-              Join us in building smarter, more sustainable cities for the future. Let's create solutions that matter.
+              Join us in building smarter, more sustainable cities for the future. Let&apos;s create solutions that matter.
             </p>
             <motion.button
               className="bg-white text-orange-500 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors inline-flex items-center space-x-2"

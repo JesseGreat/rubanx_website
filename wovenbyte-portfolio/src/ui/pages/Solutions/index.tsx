@@ -81,7 +81,7 @@ export const SolutionsPage: React.FC = () => {
               Smart Urban Solutions for a Digital Africa
             </h1>
             <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto">
-              At WovenByte, we leverage technology to tackle Africa's most pressing urban challenges, transforming daily life through innovative and accessible digital tools.
+              At WovenByte, we leverage technology to tackle Afric&apos;s most pressing urban challenges, transforming daily life through innovative and accessible digital tools.
             </p>
           </motion.div>
         </div>

@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
 import { DesktopNavigation, MobileNavigation } from "./components";
 import { Button } from "@/ui/modules";
 import { Calendar, Menu, X } from "lucide-react";
+import Image from "next/image";
 
 export const Header: React.FC = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -42,7 +43,7 @@ export const Header: React.FC = () => {
               whileHover={{ scale: 1.05 }}
               onClick={() => handlePageChange('home')}
             >
-              <img 
+              <Image 
                 src="/logo.png" // Replace with your actual logo path
                 alt="WovenByte Logo"
                 className="h-8 w-auto"

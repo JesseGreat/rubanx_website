@@ -373,7 +373,7 @@ export const ImpactPage: React.FC = () => {
           viewport={{ once: true }}
         >
           {partnerTypes.map((partner, index) => (
-            <Card key={partner.title} className="overflow-hidden hover:shadow-lg transition-shadow">
+            <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow">
               <div className="p-8">
                 <div className="flex items-center mb-6">
                   <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mr-4">
@@ -413,7 +413,7 @@ export const ImpactPage: React.FC = () => {
             Ready to Create Impact Together?
           </h2>
           <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-            Join us in building the next generation of African cities. Whether you're looking to invest, 
+            Join us in building the next generation of African cities. Whether you&apos;re looking to invest, 
             partner, or collaborate, we have opportunities that align with your goals and values.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -22,7 +22,7 @@ export const HeroSection = () => {
               className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6"
               variants={fadeInUp}
             >
-              Building Tomorrow's
+              Building Tomorrow&apos;s
               <span className="text-orange-500 block">Smart Cities</span>
             </motion.h1>
             

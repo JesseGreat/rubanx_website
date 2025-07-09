@@ -1,6 +1,6 @@
 
 
-import { AboutPage, ContactPage } from "@/ui/pages";
+import {  ContactPage } from "@/ui/pages";
 
 
 

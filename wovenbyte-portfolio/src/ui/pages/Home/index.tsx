@@ -1,5 +1,5 @@
 'use client'
-import { CTASection, HeroSection, QuoteSection, ServicesSection, TeamSection } from "./components"
+import { CTASection, HeroSection, QuoteSection, ServicesSection } from "./components"
 import { AppLayout } from "@/ui/modules";
 
  export const HomePage = () => {

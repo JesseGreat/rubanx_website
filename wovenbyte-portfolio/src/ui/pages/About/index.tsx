@@ -45,7 +45,7 @@ These two personal challenges—mobility and housing—revealed a deeper truth: 
 
             </p>
             <p className="text-lg text-gray-600 leading-relaxed">
-            That’s why I founded WovenByte—to create practical, people-centered solutions that make city life easier and more accessible for everyone. Our first product, Magic Ride, tackles the transportation crisis by letting commuters pre-book shared rides with verified drivers. But we're not stopping there. We’re also building platforms that connect house seekers directly with landlords, reduce middleman exploitation, and improve access to urban services across Africa.
+            That’s why I founded WovenByte—to create practical, people-centered solutions that make city life easier and more accessible for everyone. Our first product, Magic Ride, tackles the transportation crisis by letting commuters pre-book shared rides with verified drivers. But we&apos;re not stopping there. We’re also building platforms that connect house seekers directly with landlords, reduce middleman exploitation, and improve access to urban services across Africa.
 
 WovenByte is not just a tech company. It’s a movement to redefine urban living. We’re weaving smarter, fairer, more inclusive cities—starting from lived experience.
             </p>

@@ -3,9 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
-  Smartphone,
-  Search,
-  Monitor,
+
   CheckCircle,
   ArrowRight,
   Calendar,

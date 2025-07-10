@@ -1,53 +1,50 @@
 'use client'
 
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import { 
 
   MapPin, 
 
   Clock, 
-  Send, 
-  CheckCircle, 
 
-  ArrowRight
 } from "lucide-react";
 
-import { Button, PageHero, Section, Card, staggerContainer, AppLayout } from "@/ui/modules";
+import {  PageHero, Section, Card, staggerContainer, AppLayout } from "@/ui/modules";
 import { contactMethods, faqs, offices, socialLinks } from './constants';
 
 export const ContactPage: React.FC = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    organization: '',
-    message: '',
-    category: 'general',
-    urgency: 'normal'
-  });
+  // const [formData, setFormData] = useState({
+  //   name: '',
+  //   email: '',
+  //   phone: '',
+  //   organization: '',
+  //   message: '',
+  //   category: 'general',
+  //   urgency: 'normal'
+  // });
 
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  // const [isSubmitting, setIsSubmitting] = useState(false);
+  // const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
+  // const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  //   setFormData({
+  //     ...formData,
+  //     [e.target.name]: e.target.value
+  //   });
+  // };
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
+  // const handleSubmit = async (e: React.FormEvent) => {
+  //   e.preventDefault();
+  //   // setIsSubmitting(true);
     
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
+  //   // Simulate form submission
+  //   await new Promise(resolve => setTimeout(resolve, 2000));
     
-    setIsSubmitting(false);
-    setIsSubmitted(true);
-    console.log('Form submitted:', formData);
-  };
+  //   setIsSubmitting(false);
+  //   setIsSubmitted(true);
+  //   console.log('Form submitted:', formData);
+  // };
 
 
 

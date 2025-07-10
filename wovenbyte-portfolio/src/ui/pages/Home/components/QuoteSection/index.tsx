@@ -14,7 +14,7 @@ export const QuoteSection = () => {
             viewport={{ once: true }}
           >
             <blockquote className="text-2xl md:text-3xl lg:text-4xl font-light italic mb-8 max-w-4xl mx-auto leading-relaxed">
-              &quot;I&apos;ve get cities right, we just might survive the 21st century. We get them wrong, and we're done.&quot;
+              &quot;I&apos;ve get cities right, we just might survive the 21st century. We get them wrong, and we&apos;re done.&quot;
             </blockquote>
             <cite className="text-xl font-medium">- Robert Muggah</cite>
           </motion.div>

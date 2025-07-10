@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import { 
   Handshake, 
@@ -9,7 +9,7 @@ import {
   Building, 
   DollarSign, 
   Heart, 
-  MapPin, 
+  
   Globe, 
   Award, 
   TrendingUp, 
@@ -18,10 +18,10 @@ import {
   Zap,
   Shield,
   Calendar,
-  Star
+
 } from "lucide-react";
 
-import { AppLayout, Button, Card, fadeInUp, PageHero, Section, staggerContainer } from "@/ui/modules";
+import { AppLayout, Button, Card, PageHero, Section, staggerContainer } from "@/ui/modules";
 
 interface Partner {
   id: string;
@@ -35,7 +35,7 @@ interface Partner {
 }
 
 export const PartnersPage: React.FC = () => {
-  const [activeFilter, setActiveFilter] = useState<string>('all');
+  // const [activeFilter, setActiveFilter] = useState<string>('all');
 
   const partners: Partner[] = [
     { 
@@ -149,32 +149,32 @@ export const PartnersPage: React.FC = () => {
     }
   ];
 
-  const successStories = [
-    {
-      partner: 'Lagos State Government',
-      title: 'Smart Traffic Management System',
-      description: 'Reduced traffic congestion by 30% in key corridors through AI-powered traffic optimization.',
-      impact: '30% congestion reduction',
-      timeline: '6 months',
-      icon: MapPin
-    },
-    {
-      partner: 'African Development Bank',
-      title: 'Housing Finance Platform',
-      description: 'Digitized housing finance processes, making home ownership accessible to 10,000+ families.',
-      impact: '10K+ families housed',
-      timeline: '12 months',
-      icon: Building
-    },
-    {
-      partner: 'Microsoft Africa',
-      title: 'Cloud Infrastructure Scale-up',
-      description: 'Deployed scalable cloud infrastructure supporting 100,000+ daily active users.',
-      impact: '100K+ users supported',
-      timeline: '3 months',
-      icon: Globe
-    }
-  ];
+  // const successStories = [
+  //   {
+  //     partner: 'Lagos State Government',
+  //     title: 'Smart Traffic Management System',
+  //     description: 'Reduced traffic congestion by 30% in key corridors through AI-powered traffic optimization.',
+  //     impact: '30% congestion reduction',
+  //     timeline: '6 months',
+  //     icon: MapPin
+  //   },
+  //   {
+  //     partner: 'African Development Bank',
+  //     title: 'Housing Finance Platform',
+  //     description: 'Digitized housing finance processes, making home ownership accessible to 10,000+ families.',
+  //     impact: '10K+ families housed',
+  //     timeline: '12 months',
+  //     icon: Building
+  //   },
+  //   {
+  //     partner: 'Microsoft Africa',
+  //     title: 'Cloud Infrastructure Scale-up',
+  //     description: 'Deployed scalable cloud infrastructure supporting 100,000+ daily active users.',
+  //     impact: '100K+ users supported',
+  //     timeline: '3 months',
+  //     icon: Globe
+  //   }
+  // ];
 
   const partnershipBenefits = [
     {
@@ -209,18 +209,18 @@ export const PartnersPage: React.FC = () => {
     }
   ];
 
-  const filterCategories = [
-    { id: 'all', label: 'All Partners', count: partners.length },
-    { id: 'Technology', label: 'Technology', count: partners.filter(p => p.category === 'Technology').length },
-    { id: 'Government', label: 'Government', count: partners.filter(p => p.category === 'Government').length },
-    { id: 'NGO', label: 'NGOs', count: partners.filter(p => p.category === 'NGO').length },
-    { id: 'Investment', label: 'Investment', count: partners.filter(p => p.category === 'Investment').length },
-    { id: 'Urban Planning', label: 'Urban Planning', count: partners.filter(p => p.category === 'Urban Planning').length }
-  ];
+  // const filterCategories = [
+  //   { id: 'all', label: 'All Partners', count: partners.length },
+  //   { id: 'Technology', label: 'Technology', count: partners.filter(p => p.category === 'Technology').length },
+  //   { id: 'Government', label: 'Government', count: partners.filter(p => p.category === 'Government').length },
+  //   { id: 'NGO', label: 'NGOs', count: partners.filter(p => p.category === 'NGO').length },
+  //   { id: 'Investment', label: 'Investment', count: partners.filter(p => p.category === 'Investment').length },
+  //   { id: 'Urban Planning', label: 'Urban Planning', count: partners.filter(p => p.category === 'Urban Planning').length }
+  // ];
 
-  const filteredPartners = activeFilter === 'all' 
-    ? partners 
-    : partners.filter(p => p.category === activeFilter);
+  // const filteredPartners = activeFilter === 'all' 
+  //   ? partners 
+  //   : partners.filter(p => p.category === activeFilter);
 
   return (
     <AppLayout>

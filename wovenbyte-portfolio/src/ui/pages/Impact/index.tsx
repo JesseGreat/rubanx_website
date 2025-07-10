@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react';
-import { Building, DollarSign, Heart, MapPin, Users, Clock, TrendingUp, Award, CheckCircle, ArrowRight, Zap, Shield, Globe } from "lucide-react";
+import { Building, DollarSign, Heart, MapPin, Users, TrendingUp, Award, CheckCircle, ArrowRight, Globe } from "lucide-react";
 import { motion } from 'framer-motion';
 
 import { Card, PageHero, Section, staggerContainer, Button, AppLayout } from "@/ui/modules";

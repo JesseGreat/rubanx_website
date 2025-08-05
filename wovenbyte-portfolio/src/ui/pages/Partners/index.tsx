@@ -1,27 +1,32 @@
-'use client'
+"use client";
 
-import React from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Handshake, 
-  Target, 
-  Users, 
-  Building, 
-  DollarSign, 
-  Heart, 
-  
-  Globe, 
-  Award, 
-  TrendingUp, 
-  CheckCircle, 
+import React from "react";
+import { motion } from "framer-motion";
+import {
+  Handshake,
+  Target,
+  Users,
+  Building,
+  DollarSign,
+  Heart,
+  Globe,
+  Award,
+  TrendingUp,
+  CheckCircle,
   ArrowRight,
   Zap,
   Shield,
   Calendar,
-
 } from "lucide-react";
 
-import { AppLayout, Button, Card, PageHero, Section, staggerContainer } from "@/ui/modules";
+import {
+  AppLayout,
+  Button,
+  Card,
+  PageHero,
+  Section,
+  staggerContainer,
+} from "@/ui/modules";
 
 interface Partner {
   id: string;
@@ -38,115 +43,131 @@ export const PartnersPage: React.FC = () => {
   // const [activeFilter, setActiveFilter] = useState<string>('all');
 
   const partners: Partner[] = [
-    { 
-      id: '1', 
-      name: 'TechHub Lagos', 
-      logo: '/api/placeholder/120/60', 
-      category: 'Technology',
-      description: 'Leading technology innovation hub in West Africa',
-      since: '2023',
-      impact: 'Helped scale 15+ startups',
-      featured: true
+    {
+      id: "1",
+      name: "TechHub Lagos",
+      logo: "/api/placeholder/120/60",
+      category: "Technology",
+      description: "Leading technology innovation hub in West Africa",
+      since: "2023",
+      impact: "Helped scale 15+ startups",
+      featured: true,
     },
-    { 
-      id: '2', 
-      name: 'Lagos State Government', 
-      logo: '/api/placeholder/120/60', 
-      category: 'Government',
-      description: 'State government partnership for smart city initiatives',
-      since: '2024',
-      impact: 'Improved services for 20M+ residents'
+    {
+      id: "2",
+      name: "Lagos State Government",
+      logo: "/api/placeholder/120/60",
+      category: "Government",
+      description: "State government partnership for smart city initiatives",
+      since: "2024",
+      impact: "Improved services for 20M+ residents",
     },
-    { 
-      id: '3', 
-      name: 'Urban Development NGO', 
-      logo: '/api/placeholder/120/60', 
-      category: 'NGO',
-      description: 'Community-focused urban development organization',
-      since: '2023',
-      impact: 'Reached 50K+ community members'
+    {
+      id: "3",
+      name: "Urban Development NGO",
+      logo: "/api/placeholder/120/60",
+      category: "NGO",
+      description: "Community-focused urban development organization",
+      since: "2023",
+      impact: "Reached 50K+ community members",
     },
-    { 
-      id: '4', 
-      name: 'African Development Bank', 
-      logo: '/api/placeholder/120/60', 
-      category: 'Investment',
-      description: 'Leading development finance institution',
-      since: '2024',
-      impact: '$10M+ investment facilitated',
-      featured: true
+    {
+      id: "4",
+      name: "African Development Bank",
+      logo: "/api/placeholder/120/60",
+      category: "Investment",
+      description: "Leading development finance institution",
+      since: "2024",
+      impact: "$10M+ investment facilitated",
+      featured: true,
     },
-    { 
-      id: '5', 
-      name: 'Microsoft Africa', 
-      logo: '/api/placeholder/120/60', 
-      category: 'Technology',
-      description: 'Technology platform and cloud services partner',
-      since: '2023',
-      impact: 'Cloud infrastructure for 100K+ users'
+    {
+      id: "5",
+      name: "Microsoft Africa",
+      logo: "/api/placeholder/120/60",
+      category: "Technology",
+      description: "Technology platform and cloud services partner",
+      since: "2023",
+      impact: "Cloud infrastructure for 100K+ users",
     },
-    { 
-      id: '6', 
-      name: 'UN-Habitat', 
-      logo: '/api/placeholder/120/60', 
-      category: 'Urban Planning',
-      description: 'United Nations agency for sustainable urbanization',
-      since: '2024',
-      impact: 'Policy guidance for 5 cities'
+    {
+      id: "6",
+      name: "UN-Habitat",
+      logo: "/api/placeholder/120/60",
+      category: "Urban Planning",
+      description: "United Nations agency for sustainable urbanization",
+      since: "2024",
+      impact: "Policy guidance for 5 cities",
     },
-    { 
-      id: '7', 
-      name: 'Federal Ministry of Housing', 
-      logo: '/api/placeholder/120/60', 
-      category: 'Government',
-      description: 'Federal government housing policy partnership',
-      since: '2024',
-      impact: 'National housing platform integration'
+    {
+      id: "7",
+      name: "Federal Ministry of Housing",
+      logo: "/api/placeholder/120/60",
+      category: "Government",
+      description: "Federal government housing policy partnership",
+      since: "2024",
+      impact: "National housing platform integration",
     },
-    { 
-      id: '8', 
-      name: 'Community Health Alliance', 
-      logo: '/api/placeholder/120/60', 
-      category: 'NGO',
-      description: 'Healthcare access and community wellness',
-      since: '2023',
-      impact: 'Health services for 25K+ residents'
-    }
+    {
+      id: "8",
+      name: "Community Health Alliance",
+      logo: "/api/placeholder/120/60",
+      category: "NGO",
+      description: "Healthcare access and community wellness",
+      since: "2023",
+      impact: "Health services for 25K+ residents",
+    },
   ];
 
   const partnershipTypes = [
     {
       icon: Building,
-      title: 'Government Partners',
-      description: 'State and federal agencies working to implement smart city solutions',
-      count: partners.filter(p => p.category === 'Government').length,
-      color: 'bg-blue-100 text-blue-600',
-      benefits: ['Policy integration', 'Large-scale deployment', 'Regulatory compliance']
+      title: "Government Partners",
+      description:
+        "State and federal agencies working to implement smart city solutions",
+      count: partners.filter((p) => p.category === "Government").length,
+      color: "bg-blue-100 text-blue-600",
+      benefits: [
+        "Policy integration",
+        "Large-scale deployment",
+        "Regulatory compliance",
+      ],
     },
     {
       icon: Zap,
-      title: 'Technology Partners',
-      description: 'Tech companies and innovation hubs driving technological advancement',
-      count: partners.filter(p => p.category === 'Technology').length,
-      color: 'bg-purple-100 text-purple-600',
-      benefits: ['Technical expertise', 'Platform integration', 'Innovation acceleration']
+      title: "Technology Partners",
+      description:
+        "Tech companies and innovation hubs driving technological advancement",
+      count: partners.filter((p) => p.category === "Technology").length,
+      color: "bg-purple-100 text-purple-600",
+      benefits: [
+        "Technical expertise",
+        "Platform integration",
+        "Innovation acceleration",
+      ],
     },
     {
       icon: Heart,
-      title: 'NGO Partners',
-      description: 'Non-profit organizations focused on community impact and social good',
-      count: partners.filter(p => p.category === 'NGO').length,
-      color: 'bg-green-100 text-green-600',
-      benefits: ['Community outreach', 'Social impact', 'Grassroots engagement']
+      title: "NGO Partners",
+      description:
+        "Non-profit organizations focused on community impact and social good",
+      count: partners.filter((p) => p.category === "NGO").length,
+      color: "bg-green-100 text-green-600",
+      benefits: [
+        "Community outreach",
+        "Social impact",
+        "Grassroots engagement",
+      ],
     },
     {
       icon: DollarSign,
-      title: 'Investment Partners',
-      description: 'Financial institutions and investors supporting sustainable growth',
-      count: partners.filter(p => p.category === 'Investment').length,
-      color: 'bg-orange-100 text-orange-600',
-      benefits: ['Funding support', 'Financial guidance', 'Growth capital']
-    }
+      title: "Investment Partners",
+      description:
+        "Financial institutions and investors supporting sustainable growth",
+      count: partners.filter((p) => p.category === "Investment").length,
+      color: "bg-orange-100 text-orange-600",
+      benefits: ["Funding support", "Financial guidance", "Growth capital"],
+    },
   ];
 
   // const successStories = [
@@ -178,35 +199,35 @@ export const PartnersPage: React.FC = () => {
 
   const partnershipBenefits = [
     {
-      title: 'Market Access',
-      description: 'Expand your reach across African urban markets',
-      icon: Globe
+      title: "Market Access",
+      description: "Expand your reach across African urban markets",
+      icon: Globe,
     },
     {
-      title: 'Innovation Acceleration',
-      description: 'Accelerate product development through collaboration',
-      icon: Zap
+      title: "Innovation Acceleration",
+      description: "Accelerate product development through collaboration",
+      icon: Zap,
     },
     {
-      title: 'Shared Resources',
-      description: 'Access to shared expertise and infrastructure',
-      icon: Users
+      title: "Shared Resources",
+      description: "Access to shared expertise and infrastructure",
+      icon: Users,
     },
     {
-      title: 'Impact Measurement',
-      description: 'Track and measure social and economic impact',
-      icon: TrendingUp
+      title: "Impact Measurement",
+      description: "Track and measure social and economic impact",
+      icon: TrendingUp,
     },
     {
-      title: 'Risk Mitigation',
-      description: 'Reduce market entry risks through partnership',
-      icon: Shield
+      title: "Risk Mitigation",
+      description: "Reduce market entry risks through partnership",
+      icon: Shield,
     },
     {
-      title: 'Brand Enhancement',
-      description: 'Associate with sustainable urban development',
-      icon: Award
-    }
+      title: "Brand Enhancement",
+      description: "Associate with sustainable urban development",
+      icon: Award,
+    },
   ];
 
   // const filterCategories = [
@@ -218,15 +239,25 @@ export const PartnersPage: React.FC = () => {
   //   { id: 'Urban Planning', label: 'Urban Planning', count: partners.filter(p => p.category === 'Urban Planning').length }
   // ];
 
-  // const filteredPartners = activeFilter === 'all' 
-  //   ? partners 
+  // const filteredPartners = activeFilter === 'all'
+  //   ? partners
   //   : partners.filter(p => p.category === activeFilter);
 
   return (
     <AppLayout>
-      <PageHero 
+      <PageHero
         title="Our Valued Partners"
         subtitle="Building the future of African cities through strategic partnerships and collaborative innovation."
+        background={
+          <div
+            className="absolute inset-0 z-0"
+            style={{
+              backgroundImage: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://cdn.pixabay.com/photo/2023/06/13/18/32/ai-generated-8061569_960_720.jpg')`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+          />
+        }
       />
 
       {/* Partnership Philosophy */}
@@ -238,10 +269,14 @@ export const PartnersPage: React.FC = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Collaboration for Impact</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            Collaboration for Impact
+          </h2>
           <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            We believe that meaningful change happens when diverse organizations come together with a shared vision. 
-            Our partners are essential to scaling our solutions and creating sustainable urban transformation across Africa.
+            We believe that meaningful change happens when diverse organizations
+            come together with a shared vision. Our partners are essential to
+            scaling our solutions and creating sustainable urban transformation
+            across Africa.
           </p>
         </motion.div>
 
@@ -257,33 +292,42 @@ export const PartnersPage: React.FC = () => {
               <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Handshake className="text-orange-500" size={32} />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Strategic Alliances</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">
+                Strategic Alliances
+              </h3>
               <p className="text-gray-600 leading-relaxed">
-                Long-term partnerships that drive innovation and expand our reach across urban centers.
+                Long-term partnerships that drive innovation and expand our
+                reach across urban centers.
               </p>
             </div>
           </Card>
-          
+
           <Card className="border-2 border-blue-200">
             <div className="p-8 text-center">
               <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Users className="text-blue-500" size={32} />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Community Focus</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">
+                Community Focus
+              </h3>
               <p className="text-gray-600 leading-relaxed">
-                Partnerships that prioritize community needs and ensure our solutions serve real people.
+                Partnerships that prioritize community needs and ensure our
+                solutions serve real people.
               </p>
             </div>
           </Card>
-          
+
           <Card className="border-2 border-green-200">
             <div className="p-8 text-center">
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Target className="text-green-500" size={32} />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Measurable Impact</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">
+                Measurable Impact
+              </h3>
               <p className="text-gray-600 leading-relaxed">
-                Collaborations focused on delivering tangible results and sustainable urban development.
+                Collaborations focused on delivering tangible results and
+                sustainable urban development.
               </p>
             </div>
           </Card>
@@ -299,9 +343,12 @@ export const PartnersPage: React.FC = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Partnership Categories</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            Partnership Categories
+          </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            We work with diverse organizations across multiple sectors to maximize our impact.
+            We work with diverse organizations across multiple sectors to
+            maximize our impact.
           </p>
         </motion.div>
 
@@ -315,11 +362,15 @@ export const PartnersPage: React.FC = () => {
           {partnershipTypes.map((type, index) => (
             <Card key={index} className="overflow-hidden">
               <div className="p-6">
-                <div className={`w-12 h-12 ${type.color} rounded-lg flex items-center justify-center mb-4`}>
+                <div
+                  className={`w-12 h-12 ${type.color} rounded-lg flex items-center justify-center mb-4`}
+                >
                   <type.icon size={24} />
                 </div>
                 <div className="flex items-center justify-between mb-2">
-                  <h3 className="text-lg font-bold text-gray-900">{type.title}</h3>
+                  <h3 className="text-lg font-bold text-gray-900">
+                    {type.title}
+                  </h3>
                   <span className="bg-gray-100 text-gray-600 px-2 py-1 rounded-full text-sm font-medium">
                     {type.count}
                   </span>
@@ -327,7 +378,10 @@ export const PartnersPage: React.FC = () => {
                 <p className="text-gray-600 text-sm mb-4">{type.description}</p>
                 <div className="space-y-1">
                   {type.benefits.map((benefit, benefitIndex) => (
-                    <div key={benefitIndex} className="flex items-center text-xs text-gray-500">
+                    <div
+                      key={benefitIndex}
+                      className="flex items-center text-xs text-gray-500"
+                    >
                       <CheckCircle size={12} className="mr-1 text-green-500" />
                       <span>{benefit}</span>
                     </div>
@@ -481,9 +535,12 @@ export const PartnersPage: React.FC = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Why Partner With Us?</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            Why Partner With Us?
+          </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover the benefits of joining our partnership ecosystem and creating lasting impact together.
+            Discover the benefits of joining our partnership ecosystem and
+            creating lasting impact together.
           </p>
         </motion.div>
 
@@ -499,7 +556,9 @@ export const PartnersPage: React.FC = () => {
               <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <benefit.icon size={24} className="text-orange-500" />
               </div>
-              <h3 className="text-lg font-bold text-gray-900 mb-2">{benefit.title}</h3>
+              <h3 className="text-lg font-bold text-gray-900 mb-2">
+                {benefit.title}
+              </h3>
               <p className="text-gray-600 text-sm">{benefit.description}</p>
             </Card>
           ))}
@@ -515,26 +574,52 @@ export const PartnersPage: React.FC = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Partnership Process</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            Partnership Process
+          </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Our streamlined process ensures successful partnership development and implementation.
+            Our streamlined process ensures successful partnership development
+            and implementation.
           </p>
         </motion.div>
 
         <div className="max-w-4xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             {[
-              { step: '01', title: 'Initial Contact', description: 'Reach out and share your vision' },
-              { step: '02', title: 'Discovery Call', description: 'Explore alignment and opportunities' },
-              { step: '03', title: 'Proposal Development', description: 'Create customized partnership framework' },
-              { step: '04', title: 'Launch & Execute', description: 'Begin collaborative implementation' }
+              {
+                step: "01",
+                title: "Initial Contact",
+                description: "Reach out and share your vision",
+              },
+              {
+                step: "02",
+                title: "Discovery Call",
+                description: "Explore alignment and opportunities",
+              },
+              {
+                step: "03",
+                title: "Proposal Development",
+                description: "Create customized partnership framework",
+              },
+              {
+                step: "04",
+                title: "Launch & Execute",
+                description: "Begin collaborative implementation",
+              },
             ].map((phase, index) => (
               <Card key={index} className="p-6 text-center relative">
-                <div className="text-4xl font-bold text-orange-500 mb-2">{phase.step}</div>
-                <h3 className="text-lg font-bold text-gray-900 mb-2">{phase.title}</h3>
+                <div className="text-4xl font-bold text-orange-500 mb-2">
+                  {phase.step}
+                </div>
+                <h3 className="text-lg font-bold text-gray-900 mb-2">
+                  {phase.title}
+                </h3>
                 <p className="text-gray-600 text-sm">{phase.description}</p>
                 {index < 3 && (
-                  <ArrowRight className="absolute -right-3 top-1/2 transform -translate-y-1/2 text-orange-500 hidden md:block" size={20} />
+                  <ArrowRight
+                    className="absolute -right-3 top-1/2 transform -translate-y-1/2 text-orange-500 hidden md:block"
+                    size={20}
+                  />
                 )}
               </Card>
             ))}
@@ -554,17 +639,39 @@ export const PartnersPage: React.FC = () => {
           <div className="mb-8">
             <Handshake size={64} className="text-orange-500 mx-auto mb-6" />
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Ready to Partner with Us?</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            Ready to Partner with Us?
+          </h2>
           <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-            Join our network of forward-thinking organizations committed to transforming African cities through 
-            innovative technology and sustainable development. Together, we can create lasting change.
+            Join our network of forward-thinking organizations committed to
+            transforming African cities through innovative technology and
+            sustainable development. Together, we can create lasting change.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-orange-500 cursor-pointer hover:bg-orange-600 flex items-center">
-              <Handshake  onClick={() => window.open("https://docs.google.com/forms/d/1M2_D99qXr7iMYv2zE31m_3Tq7Bn56a3NSXSuiM-cIL8/preview", "_blank")} size={20} className="mr-2" />
+            <Button
+              size="lg"
+              className="bg-orange-500 cursor-pointer hover:bg-orange-600 flex items-center"
+            >
+              <Handshake
+                onClick={() =>
+                  window.open(
+                    "https://docs.google.com/forms/d/1M2_D99qXr7iMYv2zE31m_3Tq7Bn56a3NSXSuiM-cIL8/preview",
+                    "_blank"
+                  )
+                }
+                size={20}
+                className="mr-2"
+              />
               Become a Partner
             </Button>
-            <Button   onClick={() => window.open("https://calendly.com/wovenbyte/30min", "_blank")} size="lg" variant="outline" className="flex cursor-pointer items-center">
+            <Button
+              onClick={() =>
+                window.open("https://calendly.com/wovenbyte/30min", "_blank")
+              }
+              size="lg"
+              variant="outline"
+              className="flex cursor-pointer items-center"
+            >
               <Calendar size={20} className="mr-2" />
               Schedule a Consultation
             </Button>

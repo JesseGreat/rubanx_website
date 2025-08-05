@@ -1,17 +1,17 @@
-'use client'
+"use client";
 
-import React from 'react';
-import { motion } from 'framer-motion';
-import { 
+import React from "react";
+import { motion } from "framer-motion";
+import { MapPin, Clock } from "lucide-react";
 
-  MapPin, 
-
-  Clock, 
-
-} from "lucide-react";
-
-import {  PageHero, Section, Card, staggerContainer, AppLayout } from "@/ui/modules";
-import { contactMethods, faqs, offices, socialLinks } from './constants';
+import {
+  PageHero,
+  Section,
+  Card,
+  staggerContainer,
+  AppLayout,
+} from "@/ui/modules";
+import { contactMethods, faqs, offices, socialLinks } from "./constants";
 
 export const ContactPage: React.FC = () => {
   // const [formData, setFormData] = useState({
@@ -37,22 +37,30 @@ export const ContactPage: React.FC = () => {
   // const handleSubmit = async (e: React.FormEvent) => {
   //   e.preventDefault();
   //   // setIsSubmitting(true);
-    
+
   //   // Simulate form submission
   //   await new Promise(resolve => setTimeout(resolve, 2000));
-    
+
   //   setIsSubmitting(false);
   //   setIsSubmitted(true);
   //   console.log('Form submitted:', formData);
   // };
 
-
-
   return (
     <AppLayout>
       <PageHero
         title="Get in Touch"
-        subtitle="Ready to transform your city? Let&apos;s start a conversation about building smarter, more connected urban communities."
+        subtitle="Ready to transform your city? Let's start a conversation about building smarter, more connected urban communities."
+        background={
+          <div
+            className="absolute inset-0 z-0"
+            style={{
+              backgroundImage: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://cdn.pixabay.com/photo/2016/11/29/12/30/phone-1869510_1280.jpg')`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+          />
+        }
       />
 
       {/* Contact Methods */}
@@ -64,9 +72,12 @@ export const ContactPage: React.FC = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Multiple Ways to Connect</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            Multiple Ways to Connect
+          </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Choose the communication method that works best for you. We&apos;re here to help!
+            Choose the communication method that works best for you. We&apos;re
+            here to help!
           </p>
         </motion.div>
 
@@ -78,13 +89,22 @@ export const ContactPage: React.FC = () => {
           viewport={{ once: true }}
         >
           {contactMethods.map((method, index) => (
-            <Card key={index} className="text-center p-6 hover:shadow-lg transition-shadow cursor-pointer">
+            <Card
+              key={index}
+              className="text-center p-6 hover:shadow-lg transition-shadow cursor-pointer"
+            >
               <a href={method.action} className="block">
-                <div className={`w-16 h-16 ${method.color} rounded-full flex items-center justify-center mx-auto mb-4`}>
+                <div
+                  className={`w-16 h-16 ${method.color} rounded-full flex items-center justify-center mx-auto mb-4`}
+                >
                   <method.icon size={32} />
                 </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-2">{method.title}</h3>
-                <p className="font-medium text-gray-700 mb-1">{method.primary}</p>
+                <h3 className="text-lg font-bold text-gray-900 mb-2">
+                  {method.title}
+                </h3>
+                <p className="font-medium text-gray-700 mb-1">
+                  {method.primary}
+                </p>
                 <p className="text-sm text-gray-500">{method.secondary}</p>
               </a>
             </Card>
@@ -95,18 +115,19 @@ export const ContactPage: React.FC = () => {
       {/* Main Contact Section */}
       <Section background="gray">
         <div className="grid grid-cols-1 lg:grid-cols-1 gap-16">
-        
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-              {/* Office Hours */}
-              <Card className="p-6">
+            {/* Office Hours */}
+            <Card className="p-6">
               <div className="flex items-center mb-4">
                 <Clock className="text-orange-500 mr-3" size={24} />
-                <h3 className="text-xl font-bold text-gray-900">Business Hours</h3>
+                <h3 className="text-xl font-bold text-gray-900">
+                  Business Hours
+                </h3>
               </div>
               <div className="space-y-2 text-gray-600">
                 <div className="flex justify-between">
@@ -123,13 +144,18 @@ export const ContactPage: React.FC = () => {
                 </div>
                 <div className="mt-4 p-3 bg-orange-50 rounded-lg">
                   <p className="text-sm text-orange-700">
-                    <strong>Note:</strong> Emergency support available 24/7 for existing clients
+                    <strong>Note:</strong> Emergency support available 24/7 for
+                    existing clients
                   </p>
                 </div>
               </div>
-           
-              <h3 className="text-xl mt-6 font-bold text-gray-900 mb-4">Follow Us</h3>
-              <p className="text-gray-600 mb-4">Stay updated with our latest news and insights</p>
+
+              <h3 className="text-xl mt-6 font-bold text-gray-900 mb-4">
+                Follow Us
+              </h3>
+              <p className="text-gray-600 mb-4">
+                Stay updated with our latest news and insights
+              </p>
               <div className="flex space-x-4">
                 {socialLinks.map((social, index) => (
                   <a
@@ -143,7 +169,6 @@ export const ContactPage: React.FC = () => {
                   </a>
                 ))}
               </div>
-         
             </Card>
 
             {/* <Card className="p-8">
@@ -316,10 +341,7 @@ export const ContactPage: React.FC = () => {
             viewport={{ once: true }}
             className="space-y-8"
           >
-          
-
             {/* Social Media */}
-        
 
             {/* Quick Actions */}
             {/* <Card className="p-6">
@@ -341,7 +363,7 @@ export const ContactPage: React.FC = () => {
             </Card> */}
           </motion.div>
         </div>
-      </Section> 
+      </Section>
 
       {/* Office Locations */}
       <Section>
@@ -352,9 +374,12 @@ export const ContactPage: React.FC = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Our Office</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            Our Office
+          </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Visit us at any of our locations across Nigeria for in-person consultations.
+            Visit us at any of our locations across Nigeria for in-person
+            consultations.
           </p>
         </motion.div>
 
@@ -366,7 +391,12 @@ export const ContactPage: React.FC = () => {
           viewport={{ once: true }}
         >
           {offices.map((office, index) => (
-            <Card key={index} className={`p-6 ${office.isHQ ? 'border-2 border-orange-500' : ''}`}>
+            <Card
+              key={index}
+              className={`p-6 ${
+                office.isHQ ? "border-2 border-orange-500" : ""
+              }`}
+            >
               {office.isHQ && (
                 <div className="mb-4">
                   <span className="inline-block bg-orange-100 text-orange-600 px-3 py-1 rounded-full text-sm font-medium">
@@ -379,7 +409,9 @@ export const ContactPage: React.FC = () => {
                   <MapPin size={32} className="text-orange-500" />
                 </div>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">{office.city}</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">
+                {office.city}
+              </h3>
               <p className="text-gray-600 mb-3">{office.address}</p>
               {/* <p className="text-sm text-gray-500">{office.description}</p> */}
             </Card>
@@ -396,9 +428,12 @@ export const ContactPage: React.FC = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            Frequently Asked Questions
+          </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Get quick answers to common questions about contacting us and our services.
+            Get quick answers to common questions about contacting us and our
+            services.
           </p>
         </motion.div>
 
@@ -411,7 +446,9 @@ export const ContactPage: React.FC = () => {
         >
           {faqs.map((faq, index) => (
             <Card key={index} className="p-6">
-              <h3 className="text-lg font-bold text-gray-900 mb-3">{faq.question}</h3>
+              <h3 className="text-lg font-bold text-gray-900 mb-3">
+                {faq.question}
+              </h3>
               <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
             </Card>
           ))}

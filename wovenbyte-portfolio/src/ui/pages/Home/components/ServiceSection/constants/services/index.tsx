@@ -1,4 +1,4 @@
-import { Smartphone, Search, Monitor } from "lucide-react";
+// import { Smartphone, Search, Monitor } from "lucide-react";
 import { Service } from "../../types";
 
 export const services: Service[] = [

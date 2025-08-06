@@ -3,6 +3,8 @@ import { motion } from "framer-motion";
 import { services } from "./constants/services";
 import { fadeInUp, staggerContainer } from "@/ui/modules";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
+
 export const ServicesSection = () => {
   const router = useRouter();
   return (
@@ -38,11 +40,14 @@ export const ServicesSection = () => {
               variants={fadeInUp}
               whileHover={{ y: -10 }}
             >
-              <div className="h-48 overflow-hidden">
-                <img
+              {/* Image wrapper: relative so Image with fill works */}
+              <div className="relative h-48 w-full">
+                <Image
                   src={service.image}
                   alt={service.title}
-                  className="h-full w-full object-cover"
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  className="object-cover"
                 />
               </div>
               <div className="p-6">

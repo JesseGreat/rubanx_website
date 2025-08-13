@@ -39,7 +39,7 @@ export const HeroSection = () => {
             className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto"
             variants={fadeInUp}
           >
-            At WovenByte, we build scalable solutions to real-life city problems
+            At Ruban-X, we build scalable solutions to real-life city problems
             through innovative technology and urban planning.
           </motion.p>
 
@@ -49,7 +49,7 @@ export const HeroSection = () => {
           >
             <motion.button
               onClick={() => router.push("/solutions")}
-              className="bg-orange-500 cursor-pointer text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-orange-600 transition-colors flex items-center space-x-2"
+              className="bg-[#0049FF] cursor-pointer text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-[#0033cc] transition-colors flex items-center space-x-2"
               {...scaleOnHover}
             >
               <span>Explore Our Solutions</span>
@@ -58,7 +58,7 @@ export const HeroSection = () => {
 
             <motion.button
               onClick={() => router.push("/partners")}
-              className="border-2 border-gray-300 cursor-pointer px-8 py-4 rounded-lg font-semibold text-lg hover:border-orange-500 hover:text-orange-500 transition-colors"
+              className="border-2 border-gray-300 cursor-pointer px-8 py-4 rounded-lg font-semibold text-lg hover:border-[#0033cc] hover:text-[#0049FF] transition-colors"
               {...scaleOnHover}
             >
               Get Involved

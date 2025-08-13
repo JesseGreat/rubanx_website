@@ -13,7 +13,7 @@ export const SolutionsPage: React.FC = () => {
   return (
     <AppLayout>
       {/* Hero Section */}
-      <section className="relative py-32">
+      <section className="relative py-32 flex items-center justify-center">
         <div
           className="absolute inset-0 z-0"
           style={{
@@ -33,7 +33,7 @@ export const SolutionsPage: React.FC = () => {
               Smart Urban Solutions for a Digital Africa
             </h1>
             <p className="text-xl md:text-2xl  max-w-3xl mx-auto">
-              At WovenByte, we leverage technology to tackle Afric&apos;s most
+              At Ruban-X, we leverage technology to tackle Afric&apos;s most
               pressing urban challenges, transforming daily life through
               innovative and accessible digital tools.
             </p>
@@ -86,7 +86,7 @@ export const SolutionsPage: React.FC = () => {
                               </div>
                             </div>
 
-                            <div className="bg-gray-100 rounded-lg p-3 mb-4">
+                            <div className="bg-gray-100 text-gray-600 rounded-lg p-3 mb-4">
                               <h3 className="font-bold text-sm mb-2">
                                 Shared ride
                               </h3>
@@ -95,13 +95,13 @@ export const SolutionsPage: React.FC = () => {
                                   <span>🟢 Victoria Island</span>
                                   <span>📍 Ikeja</span>
                                 </div>
-                                <div className="w-full h-1 bg-orange-200 rounded">
-                                  <div className="w-1/3 h-full bg-orange-500 rounded"></div>
+                                <div className="w-full h-1 bg-blue-200 rounded">
+                                  <div className="w-1/3 h-full bg-[#0049FF] rounded"></div>
                                 </div>
                               </div>
                             </div>
 
-                            <div className="text-xs space-y-2 mb-4">
+                            <div className="text-xs text-gray-600 space-y-2 mb-4">
                               <div className="flex items-center">
                                 <div className="w-6 h-6 bg-orange-200 rounded-full mr-2"></div>
                                 <span>John Doe</span>
@@ -126,18 +126,18 @@ export const SolutionsPage: React.FC = () => {
                           {/* Search Bar */}
                           <div className="flex gap-2 mb-4">
                             <input
-                              className="flex-1 px-3 py-2 border rounded-lg text-sm"
+                              className="flex-1 px-3 py-2 border rounded-lg text-sm text-gray-600"
                               placeholder="Location"
                               value="Lagos"
                               readOnly
                             />
                             <input
-                              className="flex-1 px-3 py-2 border rounded-lg text-sm"
+                              className="flex-1 px-3 py-2 border rounded-lg text-sm text-gray-600"
                               placeholder="Budget"
                               value="₦500k"
                               readOnly
                             />
-                            <button className="px-4 py-2 bg-orange-500 text-white rounded-lg text-sm">
+                            <button className="px-4 py-2 bg-[#0049FF] text-white rounded-lg text-sm">
                               Search
                             </button>
                           </div>
@@ -146,7 +146,7 @@ export const SolutionsPage: React.FC = () => {
                           <div className="grid grid-cols-2 gap-3">
                             <div className="bg-gray-50 rounded-lg p-3">
                               <div className="w-full h-16 bg-gradient-to-br from-orange-200 to-orange-300 rounded mb-2"></div>
-                              <p className="text-xs font-medium">
+                              <p className="text-xs font-medium text-gray-700">
                                 Modern Apartment
                               </p>
                               <p className="text-xs text-gray-600">
@@ -155,7 +155,7 @@ export const SolutionsPage: React.FC = () => {
                             </div>
                             <div className="bg-gray-50 rounded-lg p-3">
                               <div className="w-full h-16 bg-gradient-to-br from-blue-200 to-blue-300 rounded mb-2"></div>
-                              <p className="text-xs font-medium">
+                              <p className="text-xs font-medium text-gray-700">
                                 Family House
                               </p>
                               <p className="text-xs text-gray-600">
@@ -164,7 +164,7 @@ export const SolutionsPage: React.FC = () => {
                             </div>
                             <div className="bg-gray-50 rounded-lg p-3">
                               <div className="w-full h-16 bg-gradient-to-br from-green-200 to-green-300 rounded mb-2"></div>
-                              <p className="text-xs font-medium">
+                              <p className="text-xs font-medium text-gray-700">
                                 Studio Space
                               </p>
                               <p className="text-xs text-gray-600">
@@ -173,7 +173,7 @@ export const SolutionsPage: React.FC = () => {
                             </div>
                             <div className="bg-gray-50 rounded-lg p-3">
                               <div className="w-full h-16 bg-gradient-to-br from-purple-200 to-purple-300 rounded mb-2"></div>
-                              <p className="text-xs font-medium">
+                              <p className="text-xs font-medium text-gray-700">
                                 Shared Living
                               </p>
                               <p className="text-xs text-gray-600">
@@ -203,7 +203,7 @@ export const SolutionsPage: React.FC = () => {
                               <div className="w-8 h-8 bg-blue-500 rounded-full mb-2 flex items-center justify-center">
                                 <span className="text-white text-xs">🏥</span>
                               </div>
-                              <span className="text-xs font-medium text-center">
+                              <span className="text-xs font-medium text-center text-gray-700">
                                 Healthcare Services
                               </span>
                             </div>
@@ -212,16 +212,16 @@ export const SolutionsPage: React.FC = () => {
                               <div className="w-8 h-8 bg-green-500 rounded-full mb-2 flex items-center justify-center">
                                 <span className="text-white text-xs">🎓</span>
                               </div>
-                              <span className="text-xs font-medium text-center">
+                              <span className="text-xs font-medium text-center text-gray-700">
                                 Education Portal
                               </span>
                             </div>
 
                             <div className="bg-orange-100 rounded-lg p-4 flex flex-col items-center justify-center">
-                              <div className="w-8 h-8 bg-orange-500 rounded-full mb-2 flex items-center justify-center">
+                              <div className="w-8 h-8 bg-[#0049FF] rounded-full mb-2 flex items-center justify-center">
                                 <span className="text-white text-xs">💡</span>
                               </div>
-                              <span className="text-xs font-medium text-center">
+                              <span className="text-xs font-medium text-center text-gray-700">
                                 Utility Payments
                               </span>
                             </div>
@@ -230,7 +230,7 @@ export const SolutionsPage: React.FC = () => {
                               <div className="w-8 h-8 bg-purple-500 rounded-full mb-2 flex items-center justify-center">
                                 <span className="text-white text-xs">📋</span>
                               </div>
-                              <span className="text-xs font-medium text-center">
+                              <span className="text-xs font-medium text-center text-gray-700">
                                 Government Forms
                               </span>
                             </div>
@@ -252,14 +252,14 @@ export const SolutionsPage: React.FC = () => {
                       className={`inline-block px-4 py-2 rounded-full text-sm font-medium ${
                         solution.status === "In Development"
                           ? "bg-green-100 text-green-700"
-                          : "bg-orange-100 text-orange-600"
+                          : "bg-blue-100 text-[#0033cc]"
                       }`}
                     >
                       Status: {solution.status}
                     </span>
                   </div>
 
-                  <h3 className="text-4xl font-bold text-orange-500 mb-4">
+                  <h3 className="text-4xl font-bold text-[#0033cc] mb-4">
                     {solution.title}
                   </h3>
                   <p className="text-lg text-gray-600 mb-8">
@@ -292,7 +292,7 @@ export const SolutionsPage: React.FC = () => {
                       {solution.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-start">
                           <CheckCircle
-                            className="text-orange-500 mr-3 flex-shrink-0 mt-0.5"
+                            className="text-[#0033cc] mr-3 flex-shrink-0 mt-0.5"
                             size={20}
                           />
                           <span className="text-gray-600">{feature}</span>
@@ -305,7 +305,7 @@ export const SolutionsPage: React.FC = () => {
                     disabled={solution.status !== "In Development"}
                     className={`inline-flex items-center px-8 py-4 text-lg font-medium rounded-lg transition-colors duration-200 ${
                       solution.status === "In Development"
-                        ? "bg-orange-500 text-white hover:bg-orange-600 cursor-pointer"
+                        ? "bg-[#0049FF] text-white hover:bg-[#0033cc] cursor-pointer"
                         : "bg-gray-100 text-gray-400 cursor-not-allowed"
                     }`}
                     whileHover={
@@ -330,7 +330,7 @@ export const SolutionsPage: React.FC = () => {
       </section>
 
       {/* Solutions Impact CTA */}
-      <section className="py-20 bg-gradient-to-r from-orange-500 to-orange-600">
+      <section className="py-20 bg-gradient-to-r from-blue-500 to-blue-600">
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center text-white"
@@ -351,7 +351,7 @@ export const SolutionsPage: React.FC = () => {
                 onClick={() =>
                   window.open("https://calendly.com/wovenbyte/30min", "_blank")
                 }
-                className="bg-white cursor-pointer text-orange-500 px-8 py-4 text-lg font-medium rounded-lg hover:bg-gray-100 transition-colors inline-flex items-center"
+                className="bg-white cursor-pointer text-[#0033cc] px-8 py-4 text-lg font-medium rounded-lg hover:bg-gray-100 transition-colors inline-flex items-center"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -360,7 +360,7 @@ export const SolutionsPage: React.FC = () => {
               </motion.button>
               <motion.button
                 onClick={() => router.push("/impact")}
-                className="border-2 cursor-pointer border-white text-white px-8 py-4 text-lg font-medium rounded-lg hover:bg-white hover:text-orange-500 transition-colors inline-flex items-center"
+                className="border-2 cursor-pointer border-white text-white px-8 py-4 text-lg font-medium rounded-lg hover:bg-white hover:text-[#0049FF] transition-colors inline-flex items-center"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >

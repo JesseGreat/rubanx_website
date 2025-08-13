@@ -3,7 +3,6 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Building, Globe, Calendar } from "lucide-react";
 import Image from "next/image";
-import tobi from "@/assets/tobi.png";
 
 import {
   Card,
@@ -21,7 +20,7 @@ export const AboutPage: React.FC = () => {
   return (
     <AppLayout>
       <PageHero
-        title="About WovenByte"
+        title="About Ruban-X"
         subtitle="Transforming African cities through innovative technology and collaborative urban solutions."
         background={
           <div
@@ -37,14 +36,14 @@ export const AboutPage: React.FC = () => {
 
       {/* Origin Story */}
       <Section>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center text-justify">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 place-items-center text-justify">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl font-bold text-gray-900 mb-6">
-              Founder’s Story – WovenByte
+              Founder’s Story – Ruban-X
             </h2>
             <p className="text-lg text-gray-600 leading-relaxed mb-6">
               During my NYSC service year in Abuja, I experienced the harsh
@@ -67,31 +66,31 @@ export const AboutPage: React.FC = () => {
               for the everyday person.
             </p>
             <p className="text-lg text-gray-600 leading-relaxed">
-              That’s why I founded WovenByte—to create practical,
-              people-centered solutions that make city life easier and more
-              accessible for everyone. Our first product, Magic Ride, tackles
-              the transportation crisis by letting commuters pre-book shared
-              rides with verified drivers. But we&apos;re not stopping there.
-              We’re also building platforms that connect house seekers directly
-              with landlords, reduce middleman exploitation, and improve access
-              to urban services across Africa. WovenByte is not just a tech
-              company. It’s a movement to redefine urban living. We’re weaving
-              smarter, fairer, more inclusive cities—starting from lived
-              experience.
+              That’s why I founded Ruban-X—to create practical, people-centered
+              solutions that make city life easier and more accessible for
+              everyone. Our first product, Magic Ride, tackles the
+              transportation crisis by letting commuters pre-book shared rides
+              with verified drivers. But we&apos;re not stopping there. We’re
+              also building platforms that connect house seekers directly with
+              landlords, reduce middleman exploitation, and improve access to
+              urban services across Africa. Ruban-X is not just a tech company.
+              It’s a movement to redefine urban living. We’re weaving smarter,
+              fairer, more inclusive cities—starting from lived experience.
             </p>
           </motion.div>
           <motion.div
-            className="relative w-full aspect-[3/4] rounded-xl overflow-hidden shadow-lg bg-white"
+            className="relative w-72 h-72 md:w-120 md:h-120 rounded-full shadow-xl overflow-visible flex items-center justify-center"
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
             <Image
-              src={tobi}
-              alt="Tobi, Founder of WovenByte"
-              className="object-contain"
+              src="/images/tobi.png"
+              alt="Tobi, Founder of Ruban-X"
+              className="object-cover rounded-full"
               fill
+              sizes="(max-width: 767px) 288px, 480px"
             />
           </motion.div>
         </div>
@@ -112,10 +111,10 @@ export const AboutPage: React.FC = () => {
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          <Card className="border-4 border-orange-500">
+          <Card className="border-4 border-[#0033cc]">
             <div className="p-8">
               <div className="flex items-center mb-4">
-                <Building className="text-orange-500 mr-3" size={32} />
+                <Building className="text-[#0033cc] mr-3" size={32} />
                 <h3 className="text-2xl font-bold text-gray-900">
                   Our Mission
                 </h3>
@@ -132,7 +131,7 @@ export const AboutPage: React.FC = () => {
           <Card>
             <div className="p-8">
               <div className="flex items-center mb-4">
-                <Globe className="text-orange-500 mr-3" size={32} />
+                <Globe className="text-[#0033cc] mr-3" size={32} />
                 <h3 className="text-2xl font-bold text-gray-900">Our Vision</h3>
               </div>
               <p className="text-gray-600 leading-relaxed">
@@ -168,7 +167,7 @@ export const AboutPage: React.FC = () => {
           viewport={{ once: true }}
         >
           {coreValues.map((value, index) => (
-            <Card key={index} className="border-2 border-orange-200">
+            <Card key={index} className="border-2 border-blue-200">
               <div className="p-6">
                 <div className="mb-4">{value.icon}</div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">
@@ -216,12 +215,12 @@ export const AboutPage: React.FC = () => {
               transition={{ duration: 0.6, delay: index * 0.2 }}
               viewport={{ once: true }}
             >
-              <div className="flex-shrink-0 w-20 h-20 bg-orange-500 rounded-full flex items-center justify-center mr-6">
+              <div className="flex-shrink-0 w-20 h-20 bg-[#0049FF] rounded-full flex items-center justify-center mr-6">
                 <Calendar size={32} className="text-white" />
               </div>
               <div className="flex-1">
                 <div className="flex items-center mb-2">
-                  <span className="text-2xl font-bold text-orange-500 mr-4">
+                  <span className="text-2xl font-bold text-[#0033cc] mr-4">
                     {milestone.year}
                   </span>
                   <h3 className="text-xl font-bold text-gray-900">
@@ -265,14 +264,14 @@ export const AboutPage: React.FC = () => {
           {team.map((member, index) => (
             <Card key={index} className="text-center p-8">
               <div className="flex justify-center mb-6">
-                <div className="w-20 h-20 bg-orange-100 rounded-full flex items-center justify-center">
-                  <member.icon size={40} className="text-orange-500" />
+                <div className="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center">
+                  <member.icon size={40} className="text-[#0033cc]" />
                 </div>
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">
                 {member.name}
               </h3>
-              <h4 className="text-orange-500 font-semibold mb-4">
+              <h4 className="text-[#0033cc] font-semibold mb-4">
                 {member.role}
               </h4>
               <p className="text-gray-600 leading-relaxed">
@@ -304,7 +303,7 @@ export const AboutPage: React.FC = () => {
             <Button
               onClick={() => router.push("/partners")}
               size="lg"
-              className="bg-orange-500 hover:bg-orange-600"
+              className="bg-[#0049FF] hover:bg-[#0033cc]"
             >
               Partner With Us
             </Button>

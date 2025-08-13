@@ -165,7 +165,7 @@ export const PartnersPage: React.FC = () => {
       description:
         "Financial institutions and investors supporting sustainable growth",
       count: partners.filter((p) => p.category === "Investment").length,
-      color: "bg-orange-100 text-orange-600",
+      color: "bg-blue-100 text-[#0033cc]",
       benefits: ["Funding support", "Financial guidance", "Growth capital"],
     },
   ];
@@ -287,10 +287,10 @@ export const PartnersPage: React.FC = () => {
           whileInView="animate"
           viewport={{ once: true }}
         >
-          <Card className="border-2 border-orange-200">
+          <Card className="border-2 border-blue-200">
             <div className="p-8 text-center">
-              <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Handshake className="text-orange-500" size={32} />
+              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Handshake className="text-[#0033cc]" size={32} />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-4">
                 Strategic Alliances
@@ -420,10 +420,10 @@ export const PartnersPage: React.FC = () => {
               <div className="p-6">
                 <div className="flex items-center mb-4">
                   <div className="w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center mr-3">
-                    <story.icon size={20} className="text-orange-500" />
+                    <story.icon size={20} className="text-[#0033cc]" />
                   </div>
                   <div>
-                    <h4 className="font-medium text-orange-500 text-sm">{story.partner}</h4>
+                    <h4 className="font-medium text-[#0033cc] text-sm">{story.partner}</h4>
                     <h3 className="text-lg font-bold text-gray-900">{story.title}</h3>
                   </div>
                 </div>
@@ -467,7 +467,7 @@ export const PartnersPage: React.FC = () => {
               onClick={() => setActiveFilter(category.id)}
               className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
                 activeFilter === category.id
-                  ? 'bg-orange-500 text-white'
+                  ? 'bg-[#0049FF] text-white'
                   : 'bg-white text-gray-600 hover:bg-gray-100'
               }`}
             >
@@ -494,14 +494,14 @@ export const PartnersPage: React.FC = () => {
               whileHover={{ scale: 1.02 }}
             >
               {partner.featured && (
-                <div className="bg-orange-500 text-white px-3 py-1 text-xs font-medium flex items-center">
+                <div className="bg-[#0049FF] text-white px-3 py-1 text-xs font-medium flex items-center">
                   <Star size={12} className="mr-1" />
                   Featured Partner
                 </div>
               )}
               <div className="p-6">
                 <div className="w-full h-16 bg-gradient-to-r from-orange-200 to-orange-300 rounded-lg flex items-center justify-center mb-4">
-                  <span className="text-orange-600 font-bold text-sm">{partner.name}</span>
+                  <span className="text-[#0033cc] font-bold text-sm">{partner.name}</span>
                 </div>
                 <div className="mb-2">
                   <span className="inline-block bg-gray-100 text-gray-600 px-2 py-1 rounded-full text-xs font-medium">
@@ -553,8 +553,8 @@ export const PartnersPage: React.FC = () => {
         >
           {partnershipBenefits.map((benefit, index) => (
             <Card key={index} className="p-6 text-center">
-              <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <benefit.icon size={24} className="text-orange-500" />
+              <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <benefit.icon size={24} className="text-[#0033cc]" />
               </div>
               <h3 className="text-lg font-bold text-gray-900 mb-2">
                 {benefit.title}
@@ -608,7 +608,7 @@ export const PartnersPage: React.FC = () => {
               },
             ].map((phase, index) => (
               <Card key={index} className="p-6 text-center relative">
-                <div className="text-4xl font-bold text-orange-500 mb-2">
+                <div className="text-4xl font-bold text-[#0033cc] mb-2">
                   {phase.step}
                 </div>
                 <h3 className="text-lg font-bold text-gray-900 mb-2">
@@ -617,7 +617,7 @@ export const PartnersPage: React.FC = () => {
                 <p className="text-gray-600 text-sm">{phase.description}</p>
                 {index < 3 && (
                   <ArrowRight
-                    className="absolute -right-3 top-1/2 transform -translate-y-1/2 text-orange-500 hidden md:block"
+                    className="absolute -right-3 top-1/2 transform -translate-y-1/2 text-[#0033cc] hidden md:block"
                     size={20}
                   />
                 )}
@@ -637,7 +637,7 @@ export const PartnersPage: React.FC = () => {
           viewport={{ once: true }}
         >
           <div className="mb-8">
-            <Handshake size={64} className="text-orange-500 mx-auto mb-6" />
+            <Handshake size={64} className="text-[#0033cc] mx-auto mb-6" />
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Ready to Partner with Us?
@@ -650,7 +650,7 @@ export const PartnersPage: React.FC = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
               size="lg"
-              className="bg-orange-500 cursor-pointer hover:bg-orange-600 flex items-center"
+              className="bg-[#0049FF] cursor-pointer hover:bg-[#0033cc] flex items-center"
             >
               <Handshake
                 onClick={() =>

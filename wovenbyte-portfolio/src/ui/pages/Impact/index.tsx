@@ -30,7 +30,7 @@ export const ImpactPage: React.FC = () => {
       title: "NGOs",
       description:
         "Collaborate on community projects to maximize social impact and reach underserved populations.",
-      icon: <Heart className="text-orange-500" size={32} />,
+      icon: <Heart className="text-[#0033cc]" size={32} />,
       benefits: [
         "Community outreach",
         "Social programs",
@@ -41,21 +41,21 @@ export const ImpactPage: React.FC = () => {
       title: "Investors",
       description:
         "Fuel our growth and expand our innovative solutions across African cities for sustainable returns.",
-      icon: <DollarSign className="text-orange-500" size={32} />,
+      icon: <DollarSign className="text-[#0033cc]" size={32} />,
       benefits: ["Scalable ROI", "Market expansion", "Innovation funding"],
     },
     {
       title: "Government Bodies",
       description:
         "Implement smart city initiatives and improve essential public services for citizens.",
-      icon: <Building className="text-orange-500" size={32} />,
+      icon: <Building className="text-[#0033cc]" size={32} />,
       benefits: ["Policy integration", "Public services", "Smart governance"],
     },
     {
       title: "Urban Planners",
       description:
-        "Integrate WovenByte solutions into future city designs and sustainable master plans.",
-      icon: <MapPin className="text-orange-500" size={32} />,
+        "Integrate Ruban-X solutions into future city designs and sustainable master plans.",
+      icon: <MapPin className="text-[#0033cc]" size={32} />,
       benefits: [
         "Strategic planning",
         "Future-ready cities",
@@ -152,7 +152,7 @@ export const ImpactPage: React.FC = () => {
     <AppLayout>
       <PageHero
         title="Driving Real Change in African Cities"
-        subtitle="At WovenByte, we measure our success by the tangible, positive impact we create in urban communities across Africa."
+        subtitle="At Ruban-X, we measure our success by the tangible, positive impact we create in urban communities across Africa."
         background={
           <div
             className="absolute inset-0 z-0"
@@ -191,11 +191,11 @@ export const ImpactPage: React.FC = () => {
             <Card key={index} className="text-center p-6 border-2 border-orange-100 hover:border-orange-300 transition-colors">
               <div className="flex justify-center mb-4">
                 <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center">
-                  <metric.icon size={32} className="text-orange-500" />
+                  <metric.icon size={32} className="text-[#0033cc]" />
                 </div>
               </div>
               <h3 className="text-3xl font-bold text-gray-900 mb-2">{metric.number}</h3>
-              <h4 className="text-lg font-semibold text-orange-500 mb-2">{metric.label}</h4>
+              <h4 className="text-lg font-semibold text-[#0033cc] mb-2">{metric.label}</h4>
               <p className="text-gray-600 text-sm mb-3">{metric.description}</p>
               <div className="flex items-center justify-center text-green-600 text-sm font-medium">
                 <TrendingUp size={16} className="mr-1" />
@@ -233,13 +233,13 @@ export const ImpactPage: React.FC = () => {
               <div className="p-6">
                 <div className="flex items-center mb-4">
                   <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mr-4">
-                    <story.icon size={24} className="text-orange-500" />
+                    <story.icon size={24} className="text-[#0033cc]" />
                   </div>
                   <h3 className="text-xl font-bold text-gray-900">{story.title}</h3>
                 </div>
                 <p className="text-gray-600 mb-4 leading-relaxed">{story.description}</p>
                 <div className="border-t border-gray-200 pt-4">
-                  <p className="text-orange-500 font-semibold text-sm mb-3">{story.impact}</p>
+                  <p className="text-[#0033cc] font-semibold text-sm mb-3">{story.impact}</p>
                   <div className="space-y-2">
                     {story.metrics.map((metric, metricIndex) => (
                       <div key={metricIndex} className="flex items-center text-sm text-gray-600">
@@ -295,9 +295,9 @@ export const ImpactPage: React.FC = () => {
                       2020
                     </span>
                   </div>
-                  <ArrowRight className="text-orange-500 mb-16" size={24} />
+                  <ArrowRight className="text-[#0033cc] mb-16" size={24} />
                   <div className="text-center">
-                    <div className="bg-orange-500 w-16 h-48 rounded-t-lg shadow-lg flex items-end justify-center pb-2">
+                    <div className="bg-[#0049FF] w-16 h-48 rounded-t-lg shadow-lg flex items-end justify-center pb-2">
                       <span className="text-white font-bold text-sm">
                         2.2B+
                       </span>
@@ -314,7 +314,7 @@ export const ImpactPage: React.FC = () => {
                   <span className="text-sm font-medium text-gray-700">
                     Growth Rate
                   </span>
-                  <span className="text-lg font-bold text-orange-600">
+                  <span className="text-lg font-bold text-[#0033cc]">
                     +300%
                   </span>
                 </div>
@@ -345,7 +345,7 @@ export const ImpactPage: React.FC = () => {
                   <div key={index} className="text-center flex-1">
                     <div
                       className={`${
-                        index === 5 ? "bg-orange-500" : "bg-blue-500"
+                        index === 5 ? "bg-[#0049FF]" : "bg-blue-500"
                       } mx-1 rounded-t transition-all hover:opacity-80 flex items-end justify-center pb-1`}
                       style={{ height: `${item.height * 12}px` }}
                     >
@@ -445,9 +445,8 @@ export const ImpactPage: React.FC = () => {
             Partnership Opportunities
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            WovenByte seeks collaborative alliances with organizations that
-            share our vision for innovative urban development and sustainable
-            growth.
+            Ruban-X seeks collaborative alliances with organizations that share
+            our vision for innovative urban development and sustainable growth.
           </p>
         </motion.div>
 
@@ -465,7 +464,7 @@ export const ImpactPage: React.FC = () => {
             >
               <div className="p-8">
                 <div className="flex items-center mb-6">
-                  <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mr-4">
+                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mr-4">
                     {partner.icon}
                   </div>
                   <h3 className="text-2xl font-bold text-gray-900">
@@ -484,7 +483,7 @@ export const ImpactPage: React.FC = () => {
                       key={benefitIndex}
                       className="flex items-center text-sm text-gray-600"
                     >
-                      <CheckCircle size={16} className="text-orange-500 mr-2" />
+                      <CheckCircle size={16} className="text-[#0033cc] mr-2" />
                       <span>{benefit}</span>
                     </div>
                   ))}
@@ -505,7 +504,7 @@ export const ImpactPage: React.FC = () => {
           viewport={{ once: true }}
         >
           <div className="mb-8">
-            <Award size={64} className="text-orange-500 mx-auto mb-6" />
+            <Award size={64} className="text-[#0033cc] mx-auto mb-6" />
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Ready to Create Impact Together?
@@ -524,7 +523,7 @@ export const ImpactPage: React.FC = () => {
                 )
               }
               size="lg"
-              className="bg-orange-500 cursor-pointer hover:bg-orange-600 flex items-center"
+              className="bg-[#0049FF] cursor-pointer hover:bg-[#0033cc] flex items-center"
             >
               Become a Partner
               <ArrowRight className="ml-2" size={20} />

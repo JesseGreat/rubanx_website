@@ -46,8 +46,8 @@ export const Header: React.FC = () => {
             <Image
               width={400}
               height={400}
-              src="/logo.jpeg" // Replace with your actual logo path
-              alt="WovenByte Logo"
+              src="/images/rubanx-logo.jpg" // Replace with your actual logo path
+              alt="Ruban-X Logo"
               className="h-[100px] w-auto"
             />
           </motion.div>

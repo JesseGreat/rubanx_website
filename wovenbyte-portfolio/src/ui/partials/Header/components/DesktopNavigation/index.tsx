@@ -17,8 +17,8 @@ export const DesktopNavigation: React.FC<{
           key={item.label}
           className={`flex items-center cursor-pointer space-x-2 px-4 py-2 rounded-lg transition-colors ${
             currentPage === item.href
-              ? "bg-orange-500 text-white"
-              : "text-gray-700 hover:bg-gray-100"
+              ? "bg-[#0049FF] text-white"
+              : "text-gray-700 hover:bg-gray-200"
           }`}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}

@@ -39,7 +39,7 @@ export const HeroSection = () => {
             className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto"
             variants={fadeInUp}
           >
-            At Ruban-X, we build scalable solutions to real-life city problems
+            At Zypa Tech, we build scalable solutions to real-life city problems
             through innovative technology and urban planning.
           </motion.p>
 

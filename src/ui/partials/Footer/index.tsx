@@ -29,8 +29,8 @@ export const Footer: React.FC = () => {
             <Image
               width={400}
               height={400}
-              src="/images/rubanx-logo.jpg" // Replace with your actual logo path
-              alt="Ruban-X Logo"
+              src="/images/zypa-logo.png" // Replace with your actual logo path
+              alt="Zypa Tech Logo"
               className="h-[100px] mb-6 w-auto"
             />
             <p className="text-gray-400 mb-4">
@@ -98,7 +98,7 @@ export const Footer: React.FC = () => {
           viewport={{ once: true }}
           className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400"
         >
-          <p>&copy; {currentYear} Ruban-X. All rights reserved.</p>
+          <p>&copy; {currentYear} Zypa Tech. All rights reserved.</p>
         </motion.div>
       </div>
     </footer>

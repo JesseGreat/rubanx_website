@@ -20,7 +20,7 @@ export const AboutPage: React.FC = () => {
   return (
     <AppLayout>
       <PageHero
-        title="About Ruban-X"
+        title="About Zypa Tech"
         subtitle="Transforming African cities through innovative technology and collaborative urban solutions."
         background={
           <div
@@ -43,7 +43,7 @@ export const AboutPage: React.FC = () => {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl font-bold text-gray-900 mb-6">
-              Founder’s Story – Ruban-X
+              Founder’s Story – Zypa Tech
             </h2>
             <p className="text-lg text-gray-600 leading-relaxed mb-6">
               During my NYSC service year in Abuja, I experienced the harsh
@@ -66,16 +66,17 @@ export const AboutPage: React.FC = () => {
               for the everyday person.
             </p>
             <p className="text-lg text-gray-600 leading-relaxed">
-              That’s why I founded Ruban-X—to create practical, people-centered
-              solutions that make city life easier and more accessible for
-              everyone. Our first product, Magic Ride, tackles the
-              transportation crisis by letting commuters pre-book shared rides
-              with verified drivers. But we&apos;re not stopping there. We’re
-              also building platforms that connect house seekers directly with
-              landlords, reduce middleman exploitation, and improve access to
-              urban services across Africa. Ruban-X is not just a tech company.
-              It’s a movement to redefine urban living. We’re weaving smarter,
-              fairer, more inclusive cities—starting from lived experience.
+              That’s why I founded Zypa Tech—to create practical,
+              people-centered solutions that make city life easier and more
+              accessible for everyone. Our first product, Magic Ride, tackles
+              the transportation crisis by letting commuters pre-book shared
+              rides with verified drivers. But we&apos;re not stopping there.
+              We’re also building platforms that connect house seekers directly
+              with landlords, reduce middleman exploitation, and improve access
+              to urban services across Africa. Zypa Tech is not just a tech
+              company. It’s a movement to redefine urban living. We’re weaving
+              smarter, fairer, more inclusive cities—starting from lived
+              experience.
             </p>
           </motion.div>
           <motion.div
@@ -87,7 +88,7 @@ export const AboutPage: React.FC = () => {
           >
             <Image
               src="/images/tobi.png"
-              alt="Tobi, Founder of Ruban-X"
+              alt="Tobi, Founder of Zypa Tech"
               className="object-cover rounded-full"
               fill
               sizes="(max-width: 767px) 288px, 480px"

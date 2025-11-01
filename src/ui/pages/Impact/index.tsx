@@ -54,7 +54,7 @@ export const ImpactPage: React.FC = () => {
     {
       title: "Urban Planners",
       description:
-        "Integrate Ruban-X solutions into future city designs and sustainable master plans.",
+        "Integrate Zypa Tech solutions into future city designs and sustainable master plans.",
       icon: <MapPin className="text-[#0033cc]" size={32} />,
       benefits: [
         "Strategic planning",
@@ -152,7 +152,7 @@ export const ImpactPage: React.FC = () => {
     <AppLayout>
       <PageHero
         title="Driving Real Change in African Cities"
-        subtitle="At Ruban-X, we measure our success by the tangible, positive impact we create in urban communities across Africa."
+        subtitle="At Zypa Tech, we measure our success by the tangible, positive impact we create in urban communities across Africa."
         background={
           <div
             className="absolute inset-0 z-0"
@@ -445,8 +445,9 @@ export const ImpactPage: React.FC = () => {
             Partnership Opportunities
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Ruban-X seeks collaborative alliances with organizations that share
-            our vision for innovative urban development and sustainable growth.
+            Zypa Tech seeks collaborative alliances with organizations that
+            share our vision for innovative urban development and sustainable
+            growth.
           </p>
         </motion.div>
 

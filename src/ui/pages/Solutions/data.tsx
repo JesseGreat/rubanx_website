@@ -3,7 +3,7 @@ import { Monitor, Search, Smartphone } from "lucide-react";
 export const solutions = [
   {
     id: "magic-ride",
-    title: "Magic Ride",
+    title: "Zypa Ride",
     description: "Revolutionizing Urban Commute with Efficiency and Ease",
     icon: <Smartphone className="text-[#0033cc]" size={48} />,
     buttonText: "Join Waitlist",
@@ -11,7 +11,7 @@ export const solutions = [
     problem:
       "In many African cities, daily commuting—especially during rush hours—has become a frustrating challenge. Workers, students, and traders spend long hours waiting, pushing through crowds, and even engaging in arguments just to find a ride. Existing ride-hailing platforms are often too expensive for the average commuter, while public transport remains overstretched, unpredictable, and inefficient.",
     solution:
-      "Magic Ride is a smart, people-first transportation platform designed to simplify urban mobility. We enable commuters to book scheduled shared rides in advance with drivers already heading their way. Whether it’s the early morning rush or the stressful evening return, Magic Ride eliminates uncertainty, overcrowding, and cost burden—turning daily travel into a seamless, dependable experience.",
+      "Zypa Ride is a smart, people-first transportation platform designed to simplify urban mobility. We enable commuters to book scheduled shared rides in advance with drivers already heading their way. Whether it’s the early morning rush or the stressful evening return, Magic Ride eliminates uncertainty, overcrowding, and cost burden—turning daily travel into a seamless, dependable experience.",
     features: [
       "Book your ride hours before peak time and avoid the rush entirely.",
 

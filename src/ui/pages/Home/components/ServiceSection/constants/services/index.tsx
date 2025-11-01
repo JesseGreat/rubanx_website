@@ -4,13 +4,13 @@ import { Service } from "../../types";
 export const services: Service[] = [
   {
     id: "magic-ride",
-    title: "Magic Ride",
+    title: "Zypa Ride",
     description:
       "Book scheduled rides with others going the same route, reducing delays and stress for urban commuters.",
     // icon: <Smartphone className="text-[#0033cc]" size={32} />,
     image:
       "https://cdn.pixabay.com/photo/2019/07/28/12/33/auto-4368663_1280.jpg",
-    buttonText: "Discover Magic Ride",
+    buttonText: "Discover Zypa Ride",
   },
   {
     id: "housing-tools",

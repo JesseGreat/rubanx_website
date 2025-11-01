@@ -48,7 +48,7 @@ export const milestones = [
     year: "2024",
     title: "Company Founded",
     description:
-      "Ruban-X was established with a vision to transform African cities through technology",
+      "Zypa Tech was established with a vision to transform African cities through technology",
   },
   {
     year: "2024",

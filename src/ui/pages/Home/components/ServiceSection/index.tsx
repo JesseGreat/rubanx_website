@@ -21,7 +21,8 @@ export const ServicesSection = () => {
             What We Do
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            At Ruban-X, we build scalable solutions to real-life city problems.
+            At Zypa Tech, we build scalable solutions to real-life city
+            problems.
           </p>
         </motion.div>
 

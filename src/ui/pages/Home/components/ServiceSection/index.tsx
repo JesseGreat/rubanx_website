@@ -59,7 +59,7 @@ export const ServicesSection = () => {
                 </p>
                 <motion.button
                   onClick={() => router.push("/solutions")}
-                  className="w-full bg-gray-100 text-gray-700 py-3 rounded-lg font-medium hover:bg-[#0049FF] hover:text-white transition-colors duration-300"
+                  className="w-full bg-gray-100 text-gray-700 py-3 rounded-lg font-medium hover:bg-[#EE6625] hover:text-white transition-colors duration-300"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >

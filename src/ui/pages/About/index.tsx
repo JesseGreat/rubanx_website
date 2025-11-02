@@ -112,10 +112,10 @@ export const AboutPage: React.FC = () => {
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          <Card className="border-4 border-[#0033cc]">
+          <Card className="border-4 border-[#EE6625]">
             <div className="p-8">
               <div className="flex items-center mb-4">
-                <Building className="text-[#0033cc] mr-3" size={32} />
+                <Building className="text-[#EE6625] mr-3" size={32} />
                 <h3 className="text-2xl font-bold text-gray-900">
                   Our Mission
                 </h3>
@@ -132,7 +132,7 @@ export const AboutPage: React.FC = () => {
           <Card>
             <div className="p-8">
               <div className="flex items-center mb-4">
-                <Globe className="text-[#0033cc] mr-3" size={32} />
+                <Globe className="text-[#EE6625] mr-3" size={32} />
                 <h3 className="text-2xl font-bold text-gray-900">Our Vision</h3>
               </div>
               <p className="text-gray-600 leading-relaxed">
@@ -216,12 +216,12 @@ export const AboutPage: React.FC = () => {
               transition={{ duration: 0.6, delay: index * 0.2 }}
               viewport={{ once: true }}
             >
-              <div className="flex-shrink-0 w-20 h-20 bg-[#0049FF] rounded-full flex items-center justify-center mr-6">
+              <div className="flex-shrink-0 w-20 h-20 bg-[#EE6625] rounded-full flex items-center justify-center mr-6">
                 <Calendar size={32} className="text-white" />
               </div>
               <div className="flex-1">
                 <div className="flex items-center mb-2">
-                  <span className="text-2xl font-bold text-[#0033cc] mr-4">
+                  <span className="text-2xl font-bold text-[#EE6625] mr-4">
                     {milestone.year}
                   </span>
                   <h3 className="text-xl font-bold text-gray-900">
@@ -266,13 +266,13 @@ export const AboutPage: React.FC = () => {
             <Card key={index} className="text-center p-8">
               <div className="flex justify-center mb-6">
                 <div className="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center">
-                  <member.icon size={40} className="text-[#0033cc]" />
+                  <member.icon size={40} className="text-[#EE6625]" />
                 </div>
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">
                 {member.name}
               </h3>
-              <h4 className="text-[#0033cc] font-semibold mb-4">
+              <h4 className="text-[#EE6625] font-semibold mb-4">
                 {member.role}
               </h4>
               <p className="text-gray-600 leading-relaxed">
@@ -304,7 +304,7 @@ export const AboutPage: React.FC = () => {
             <Button
               onClick={() => router.push("/partners")}
               size="lg"
-              className="bg-[#0049FF] hover:bg-[#0033cc]"
+              className="bg-[#EE6625] hover:bg-[#CC4F14]"
             >
               Partner With Us
             </Button>

@@ -124,7 +124,7 @@ export const ContactPage: React.FC = () => {
             {/* Office Hours */}
             <Card className="p-6">
               <div className="flex items-center mb-4">
-                <Clock className="text-[#0033cc] mr-3" size={24} />
+                <Clock className="text-[#EE6625] mr-3" size={24} />
                 <h3 className="text-xl font-bold text-gray-900">
                   Business Hours
                 </h3>
@@ -143,7 +143,7 @@ export const ContactPage: React.FC = () => {
                   <span className="font-medium">Closed</span>
                 </div>
                 <div className="mt-4 p-3 bg-blue-50 rounded-lg">
-                  <p className="text-sm text-[#0033cc]">
+                  <p className="text-sm text-[#EE6625]">
                     <strong>Note:</strong> Emergency support available 24/7 for
                     existing clients
                   </p>
@@ -191,7 +191,7 @@ export const ContactPage: React.FC = () => {
                           value={formData.name}
                           onChange={handleInputChange}
                           placeholder="John Doe"
-                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-[#0033cc] transition-colors"
+                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-[#EE6625] transition-colors"
                           required
                         />
                       </div>
@@ -206,7 +206,7 @@ export const ContactPage: React.FC = () => {
                           value={formData.email}
                           onChange={handleInputChange}
                           placeholder="john@example.com"
-                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-[#0033cc] transition-colors"
+                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-[#EE6625] transition-colors"
                           required
                         />
                       </div>
@@ -223,7 +223,7 @@ export const ContactPage: React.FC = () => {
                           value={formData.phone}
                           onChange={handleInputChange}
                           placeholder="+234 800 123 4567"
-                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-[#0033cc] transition-colors"
+                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-[#EE6625] transition-colors"
                         />
                       </div>
                       
@@ -237,7 +237,7 @@ export const ContactPage: React.FC = () => {
                           value={formData.organization}
                           onChange={handleInputChange}
                           placeholder="Your Company/Organization"
-                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-[#0033cc] transition-colors"
+                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-[#EE6625] transition-colors"
                         />
                       </div>
                     </div>
@@ -251,7 +251,7 @@ export const ContactPage: React.FC = () => {
                           name="category"
                           value={formData.category}
                           onChange={handleInputChange}
-                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-[#0033cc] transition-colors"
+                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-[#EE6625] transition-colors"
                         >
                           <option value="general">General Inquiry</option>
                           <option value="partnership">Potential Partner</option>
@@ -271,7 +271,7 @@ export const ContactPage: React.FC = () => {
                           name="urgency"
                           value={formData.urgency}
                           onChange={handleInputChange}
-                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-[#0033cc] transition-colors"
+                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-[#EE6625] transition-colors"
                         >
                           <option value="low">Low - General inquiry</option>
                           <option value="normal">Normal - Standard response</option>
@@ -291,7 +291,7 @@ export const ContactPage: React.FC = () => {
                         onChange={handleInputChange}
                         placeholder="Tell us how we can help you..."
                         rows={6}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-[#0033cc] transition-colors resize-none"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-[#EE6625] transition-colors resize-none"
                         required
                       />
                     </div>
@@ -394,19 +394,19 @@ export const ContactPage: React.FC = () => {
             <Card
               key={index}
               className={`p-6 ${
-                office.isHQ ? "border-2 border-[#0033cc]" : ""
+                office.isHQ ? "border-2 border-[#EE6625]" : ""
               }`}
             >
               {office.isHQ && (
                 <div className="mb-4">
-                  <span className="inline-block bg-blue-100 text-[#0033cc] px-3 py-1 rounded-full text-sm font-medium">
+                  <span className="inline-block bg-blue-100 text-[#EE6625] px-3 py-1 rounded-full text-sm font-medium">
                     Headquarters
                   </span>
                 </div>
               )}
               <div className="relative h-32 rounded-lg overflow-hidden bg-gradient-to-br from-blue-100 to-blue-100 mb-4">
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <MapPin size={32} className="text-[#0033cc]" />
+                  <MapPin size={32} className="text-[#EE6625]" />
                 </div>
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">

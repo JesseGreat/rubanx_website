@@ -21,10 +21,10 @@ export const Button: React.FC<{
     "font-medium cursor-pointer rounded-lg transition-colors duration-200 inline-flex items-center justify-center";
 
   const variants = {
-    primary: "bg-[#0049FF] text-white hover:bg-[#0033cc]",
-    secondary: "bg-gray-100 text-gray-700 hover:bg-[#0049FF] hover:text-white",
+    primary: "bg-[#EE6625] text-white hover:bg-[#CC4F14]",
+    secondary: "bg-gray-100 text-gray-700 hover:bg-[#EE6625] hover:text-white",
     outline:
-      "border-2 border-gray-300 text-gray-700 hover:border-[#0033cc] hover:text-[#0049FF]",
+      "border-2 border-gray-300 text-gray-700 hover:border-[#EE6625] hover:text-[#EE6625]",
   };
 
   const sizes = {

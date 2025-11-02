@@ -5,7 +5,7 @@ export const solutions = [
     id: "magic-ride",
     title: "Zypa Ride",
     description: "Revolutionizing Urban Commute with Efficiency and Ease",
-    icon: <Smartphone className="text-[#0033cc]" size={48} />,
+    icon: <Smartphone className="text-[#EE6625]" size={48} />,
     buttonText: "Join Waitlist",
     status: "Development",
     problem:
@@ -26,7 +26,7 @@ export const solutions = [
     title: "Affordable Housing Tool",
     description:
       "Connecting Urban Dwellers with Suitable and Sustainable Living Spaces",
-    icon: <Search className="text-[#0033cc]" size={48} />,
+    icon: <Search className="text-[#EE6625]" size={48} />,
     buttonText: "Join Waitlist",
     status: "Development",
     problem:
@@ -44,7 +44,7 @@ export const solutions = [
     id: "urban-platform",
     title: "Urban Resource Platform",
     description: "Your Gateway to Essential City Services—Made Simple",
-    icon: <Monitor className="text-[#0033cc]" size={48} />,
+    icon: <Monitor className="text-[#EE6625]" size={48} />,
     buttonText: "Join Waitlist",
     status: "Development",
     problem:

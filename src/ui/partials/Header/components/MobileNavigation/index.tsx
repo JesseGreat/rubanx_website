@@ -34,7 +34,7 @@ export const MobileNavigation: React.FC<{
                 key={item.label}
                 className={`flex items-center cursor-pointer space-x-3 px-4 py-3   transition-colors text-left ${
                   currentPage === item.href
-                    ? "border-b border-[#0033cc]  text-[#0033cc]"
+                    ? "border-b border-[#EE6625]  text-[#EE6625]"
                     : "text-gray-700 hover:bg-gray-100"
                 }`}
                 whileHover={{ scale: 1.02 }}

@@ -15,10 +15,10 @@ export const CTASection = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl text-[#0033cc] md:text-5xl font-bold mb-6">
+          <h2 className="text-4xl text-[#EE6625] md:text-5xl font-bold mb-6">
             Be part of the urban transformation.
           </h2>
-          <p className="text-xl mb-8 text-[#0033cc] max-w-2xl mx-auto opacity-90">
+          <p className="text-xl mb-8 text-[#EE6625] max-w-2xl mx-auto opacity-90">
             Join us in building smarter, more sustainable cities for the future.
             Let&apos;s create solutions that matter.
           </p>
@@ -26,7 +26,7 @@ export const CTASection = () => {
             onClick={() =>
               window.open("https://calendly.com/wovenbyte/30min", "_blank")
             }
-            className="bg-[#0049FF] text-white cursor-pointer px-8 py-4 rounded-lg font-semibold text-lg  transition-colors inline-flex items-center space-x-2"
+            className="bg-[#EE6625] hover:bg-[#CC4F14] text-white cursor-pointer px-8 py-4 rounded-lg font-semibold text-lg  transition-colors inline-flex items-center space-x-2"
             {...scaleOnHover}
           >
             <Calendar size={20} />

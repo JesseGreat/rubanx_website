@@ -31,6 +31,6 @@ export const contactMethods = [
     primary: "Book a consultation",
     secondary: "30-min strategy session available",
     action: "https://calendly.com/wovenbyte/30min",
-    color: "bg-blue-100 text-[#0033cc]",
+    color: "bg-blue-100 text-[#EE6625]",
   },
 ];

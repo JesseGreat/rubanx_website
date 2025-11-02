@@ -40,7 +40,7 @@ export const TeamSection = () => {
             >
               <div className="relative mb-4 mx-auto w-48 h-48 rounded-full overflow-hidden bg-gray-200 group-hover:shadow-xl transition-shadow duration-300">
                 <div className="w-full h-full bg-gradient-to-br from-orange-200 to-orange-300 flex items-center justify-center">
-                  <Users size={48} className="text-[#0033cc]" />
+                  <Users size={48} className="text-[#EE6625]" />
                 </div>
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">

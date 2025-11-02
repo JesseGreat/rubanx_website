@@ -7,7 +7,7 @@ export const services: Service[] = [
     title: "Zypa Ride",
     description:
       "Book scheduled rides with others going the same route, reducing delays and stress for urban commuters.",
-    // icon: <Smartphone className="text-[#0033cc]" size={32} />,
+    // icon: <Smartphone className="text-[#EE6625]" size={32} />,
     image:
       "https://cdn.pixabay.com/photo/2019/07/28/12/33/auto-4368663_1280.jpg",
     buttonText: "Discover Zypa Ride",
@@ -17,7 +17,7 @@ export const services: Service[] = [
     title: "Affordable Housing Tools",
     description:
       "Connecting house seekers directly to the landlord breaking the agent trauma problem",
-    // icon: <Search className="text-[#0033cc]" size={32} />,
+    // icon: <Search className="text-[#EE6625]" size={32} />,
     image:
       "https://cdn.pixabay.com/photo/2023/11/06/02/21/kitchen-8368672_1280.jpg",
     buttonText: "Explore Housing",
@@ -27,7 +27,7 @@ export const services: Service[] = [
     title: "Urban Resource Platform",
     description:
       "A digital hub for accessing essential city services easily, from health information to educational resources.",
-    // icon: <Monitor className="text-[#0033cc]" size={32} />,
+    // icon: <Monitor className="text-[#EE6625]" size={32} />,
     image:
       "https://cdn.pixabay.com/photo/2024/07/14/13/46/ai-generated-8894582_960_720.jpg",
     buttonText: "Access Services",

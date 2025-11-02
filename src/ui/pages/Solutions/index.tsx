@@ -96,7 +96,7 @@ export const SolutionsPage: React.FC = () => {
                                   <span>📍 Ikeja</span>
                                 </div>
                                 <div className="w-full h-1 bg-blue-200 rounded">
-                                  <div className="w-1/3 h-full bg-[#0049FF] rounded"></div>
+                                  <div className="w-1/3 h-full bg-[#EE6625] rounded"></div>
                                 </div>
                               </div>
                             </div>
@@ -137,7 +137,7 @@ export const SolutionsPage: React.FC = () => {
                               value="₦500k"
                               readOnly
                             />
-                            <button className="px-4 py-2 bg-[#0049FF] text-white rounded-lg text-sm">
+                            <button className="px-4 py-2 bg-[#EE6625] text-white rounded-lg text-sm">
                               Search
                             </button>
                           </div>
@@ -218,7 +218,7 @@ export const SolutionsPage: React.FC = () => {
                             </div>
 
                             <div className="bg-orange-100 rounded-lg p-4 flex flex-col items-center justify-center">
-                              <div className="w-8 h-8 bg-[#0049FF] rounded-full mb-2 flex items-center justify-center">
+                              <div className="w-8 h-8 bg-[#EE6625] rounded-full mb-2 flex items-center justify-center">
                                 <span className="text-white text-xs">💡</span>
                               </div>
                               <span className="text-xs font-medium text-center text-gray-700">
@@ -252,14 +252,14 @@ export const SolutionsPage: React.FC = () => {
                       className={`inline-block px-4 py-2 rounded-full text-sm font-medium ${
                         solution.status === "In Development"
                           ? "bg-green-100 text-green-700"
-                          : "bg-blue-100 text-[#0033cc]"
+                          : "bg-blue-100 text-[#EE6625]"
                       }`}
                     >
                       Status: {solution.status}
                     </span>
                   </div>
 
-                  <h3 className="text-4xl font-bold text-[#0033cc] mb-4">
+                  <h3 className="text-4xl font-bold text-[#EE6625] mb-4">
                     {solution.title}
                   </h3>
                   <p className="text-lg text-gray-600 mb-8">
@@ -292,7 +292,7 @@ export const SolutionsPage: React.FC = () => {
                       {solution.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-start">
                           <CheckCircle
-                            className="text-[#0033cc] mr-3 flex-shrink-0 mt-0.5"
+                            className="text-[#EE6625] mr-3 flex-shrink-0 mt-0.5"
                             size={20}
                           />
                           <span className="text-gray-600">{feature}</span>
@@ -305,7 +305,7 @@ export const SolutionsPage: React.FC = () => {
                     disabled={solution.status !== "In Development"}
                     className={`inline-flex items-center px-8 py-4 text-lg font-medium rounded-lg transition-colors duration-200 ${
                       solution.status === "In Development"
-                        ? "bg-[#0049FF] text-white hover:bg-[#0033cc] cursor-pointer"
+                        ? "bg-[#EE6625] text-white hover:bg-[#CC4F14] cursor-pointer"
                         : "bg-gray-100 text-gray-400 cursor-not-allowed"
                     }`}
                     whileHover={
@@ -330,7 +330,7 @@ export const SolutionsPage: React.FC = () => {
       </section>
 
       {/* Solutions Impact CTA */}
-      <section className="py-20 bg-gradient-to-r from-blue-500 to-blue-600">
+      <section className="py-20 bg-gradient-to-r from-[#EE6625] to-[#CC4F14]">
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center text-white"
@@ -351,7 +351,7 @@ export const SolutionsPage: React.FC = () => {
                 onClick={() =>
                   window.open("https://calendly.com/wovenbyte/30min", "_blank")
                 }
-                className="bg-white cursor-pointer text-[#0033cc] px-8 py-4 text-lg font-medium rounded-lg hover:bg-gray-100 transition-colors inline-flex items-center"
+                className="bg-white cursor-pointer text-[#EE6625] px-8 py-4 text-lg font-medium rounded-lg hover:bg-gray-100 transition-colors inline-flex items-center"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -360,7 +360,7 @@ export const SolutionsPage: React.FC = () => {
               </motion.button>
               <motion.button
                 onClick={() => router.push("/impact")}
-                className="border-2 cursor-pointer border-white text-white px-8 py-4 text-lg font-medium rounded-lg hover:bg-white hover:text-[#0049FF] transition-colors inline-flex items-center"
+                className="border-2 cursor-pointer border-white text-white px-8 py-4 text-lg font-medium rounded-lg hover:bg-white hover:text-[#EE6625] transition-colors inline-flex items-center"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >

@@ -49,7 +49,7 @@ export const HeroSection = () => {
           >
             <motion.button
               onClick={() => router.push("/solutions")}
-              className="bg-[#0049FF] cursor-pointer text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-[#0033cc] transition-colors flex items-center space-x-2"
+              className="bg-[#EE6625] cursor-pointer text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-[#CC4F14] transition-colors flex items-center space-x-2"
               {...scaleOnHover}
             >
               <span>Explore Our Solutions</span>
@@ -58,7 +58,7 @@ export const HeroSection = () => {
 
             <motion.button
               onClick={() => router.push("/partners")}
-              className="border-2 border-gray-300 cursor-pointer px-8 py-4 rounded-lg font-semibold text-lg hover:border-[#0033cc] hover:text-[#0049FF] transition-colors"
+              className="border-2 border-gray-300 cursor-pointer px-8 py-4 rounded-lg font-semibold text-lg hover:border-[#EE6625] hover:text-[#EE6625] transition-colors"
               {...scaleOnHover}
             >
               Get Involved

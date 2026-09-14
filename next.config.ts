@@ -1,16 +1,25 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  /*
+    No output: 'export' here on purpose. The contact form posts to a route
+    handler, which a static export cannot serve.
+  */
   images: {
-    remotePatterns: [
+    formats: ["image/avif", "image/webp"],
+  },
+  poweredByHeader: false,
+  async headers() {
+    return [
       {
-        protocol: "https",
-        hostname: "cdn.pixabay.com",
-        port: "",
-        pathname: "/**",
+        source: "/:path*",
+        headers: [
+          { key: "X-Content-Type-Options", value: "nosniff" },
+          { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
+          { key: "X-Frame-Options", value: "SAMEORIGIN" },
+        ],
       },
-    ],
+    ];
   },
 };
 

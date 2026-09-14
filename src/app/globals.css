@@ -1,26 +1,205 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/*
+  Zypa Tech design system.
+  Concept: "ruled, not boxed". Structure comes from hairlines and alignment.
+  There are no shadows on content surfaces anywhere in this codebase.
+*/
+
+@theme {
+  /* Brand palette. Fixed by the Zypa brand guide. */
+  --color-orange: #ee6625;
+  --color-orange-press: #d0521a;
+  --color-charcoal: #231f20;
+  --color-ink: #1c1819;
+  --color-tint: #fdf1ea;
+
+  /* Hairlines, the only structural device on the site. */
+  --color-rule: rgba(28, 24, 25, 0.14);
+  --color-rule-strong: rgba(28, 24, 25, 0.28);
+  --color-rule-dark: rgba(255, 255, 255, 0.18);
+  --color-rule-dark-strong: rgba(255, 255, 255, 0.34);
+
+  /* Muted text that still clears AA. Never used for body copy. */
+  --color-muted: #5c5254;
+  --color-muted-dark: rgba(255, 255, 255, 0.72);
+
+  /* Fluid type scale. Tracking goes negative as size grows. */
+  --text-display: clamp(2.5rem, 6.2vw, 4.75rem);
+  --text-display--line-height: 1.02;
+  --text-display--letter-spacing: -0.03em;
+
+  --text-quote: clamp(2rem, 4.6vw, 3.5rem);
+  --text-quote--line-height: 1.12;
+  --text-quote--letter-spacing: -0.02em;
+
+  --text-h2: clamp(1.875rem, 3.4vw, 2.875rem);
+  --text-h2--line-height: 1.08;
+  --text-h2--letter-spacing: -0.02em;
+
+  --text-h3: 1.375rem;
+  --text-h3--line-height: 1.25;
+  --text-h3--letter-spacing: -0.01em;
+
+  --text-lede: clamp(1.125rem, 1.6vw, 1.3125rem);
+  --text-lede--line-height: 1.5;
+
+  --text-body: 1.0625rem;
+  --text-body--line-height: 1.65;
+
+  --text-meta: 0.9375rem;
+  --text-meta--line-height: 1.5;
+
+  --font-sans: var(--font-montserrat), ui-sans-serif, system-ui, sans-serif;
+  --font-rounded: var(--font-varela-round), var(--font-montserrat), ui-rounded,
+    sans-serif;
+
+  --spacing-gutter: 1.5rem;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  body {
+    background: #ffffff;
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-size: var(--text-body);
+    line-height: var(--text-body--line-height);
+    /* Reserved so the floating WhatsApp control never covers page content. */
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    color: var(--color-charcoal);
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  /* Visible keyboard focus everywhere. On orange surfaces it inverts. */
+  :focus-visible {
+    outline: 2px solid var(--color-orange);
+    outline-offset: 2px;
+    border-radius: 1px;
+  }
+
+  .on-orange:focus-visible,
+  .on-tint:focus-visible {
+    outline-color: var(--color-charcoal);
+  }
+
+  ::selection {
+    background: var(--color-orange);
+    color: #ffffff;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer components {
+  /* The single page container. 1216px, 4 columns at 360, 12 at desktop. */
+  .shell {
+    width: 100%;
+    max-width: 76rem;
+    margin-inline: auto;
+    padding-inline: 1.25rem;
+  }
+
+  @media (min-width: 768px) {
+    .shell {
+      padding-inline: 2.5rem;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .shell {
+      padding-inline: 3rem;
+    }
+  }
+
+  /* Measure limits. Body copy never runs wider than this. */
+  .measure {
+    max-width: 68ch;
+  }
+
+  .measure-lede {
+    max-width: 58ch;
+  }
+}
+
+/*
+  Motion: moves right, or not at all.
+  Three behaviours only. Every one collapses to its final state under
+  prefers-reduced-motion.
+*/
+
+/*
+  1. A section rule draws in from the left as the section enters.
+
+  Driven entirely by CSS scroll-driven animation, so it costs no JavaScript
+  and no observer. Where animation-timeline is unsupported the rule is simply
+  present from the start, which is the correct fallback: the rule is
+  structure, and the drawing is decoration on top of it.
+*/
+@keyframes draw-rule {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+.rule-draw {
+  transform-origin: left center;
+}
+
+@supports (animation-timeline: view()) {
+  .rule-draw {
+    animation: draw-rule 1s linear both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 22%;
+  }
+}
+
+/* 2. Chevrons advance on hover and focus. */
+.advance {
+  transition: transform 160ms cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.group:hover .advance,
+.group:focus-visible .advance,
+a:hover > .advance,
+a:focus-visible > .advance,
+button:hover > .advance,
+button:focus-visible > .advance {
+  transform: translateX(6px);
+}
+
+/* 3. The header compresses past the first scroll. */
+.header-shell {
+  transition: height 220ms cubic-bezier(0.22, 0.61, 0.36, 1),
+    border-color 220ms linear;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .rule-draw {
+    animation: none;
+    transform: scaleX(1);
+  }
 }

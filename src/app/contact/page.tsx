@@ -4,24 +4,26 @@ import { ButtonLink } from "@/components/button";
 import { ContactForm } from "@/components/contact-form";
 import { ArrowLink, PageHeader, Rule } from "@/components/primitives";
 import { contactPage } from "@/content/contact";
+import { Breadcrumbs } from "@/components/seo";
 import { bookingReady, bookingUrl, site } from "@/content/site";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  title: "Contact",
+export const metadata: Metadata = pageMetadata({
+  title: "Contact a software developer in Abuja",
   description:
-    "Start a project with Zypa Tech. Offices in Lugbe, Abuja. Send a message, book a call or reach us on WhatsApp.",
-  alternates: { canonical: "/contact" },
-  openGraph: {
-    title: `Contact | ${site.shortName}`,
-    description:
-      "Start a project with Zypa Tech. Offices in Lugbe, Abuja. Send a message, book a call or reach us on WhatsApp.",
-    url: `${site.url}/contact`,
-  },
-};
+    "Start a project with Zypa Tech. Office in Lugbe, Abuja. Send a message, call +234 814 121 5567 or reach us on WhatsApp. We reply within one working day.",
+  path: "/contact",
+});
 
 export default function ContactPage() {
   return (
     <>
+      <Breadcrumbs
+        trail={[
+          { name: "Home", path: "/" },
+          { name: "Contact", path: "/contact" },
+        ]}
+      />
       <PageHeader heading={contactPage.heading} lede={contactPage.lede} />
 
       {/*

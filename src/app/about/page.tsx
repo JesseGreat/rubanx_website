@@ -4,24 +4,28 @@ import Image from "next/image";
 import { ButtonLink } from "@/components/button";
 import { PageHeader, Section, SectionHead } from "@/components/primitives";
 import { assurances, leaders, staffing, story } from "@/content/about";
-import { cta, site } from "@/content/site";
+import { Breadcrumbs, JsonLd } from "@/components/seo";
+import { cta } from "@/content/site";
+import { peopleJsonLd } from "@/lib/json-ld";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  title: "About",
+export const metadata: Metadata = pageMetadata({
+  title: "About us, a software engineering company in Abuja",
   description:
-    "Zypa Tech Limited is a software engineering and product design company in Abuja. We work as the delivery team for organisations that need engineering capacity or need to move faster.",
-  alternates: { canonical: "/about" },
-  openGraph: {
-    title: `About | ${site.shortName}`,
-    description:
-      "A software engineering and product design company in Abuja, working as the delivery team for organisations across Nigeria and beyond.",
-    url: `${site.url}/about`,
-  },
-};
+    "Zypa Tech Limited is a software engineering and product design company in Abuja, working as the delivery team for organisations across Nigeria. Meet the leadership.",
+  path: "/about",
+});
 
 export default function AboutPage() {
   return (
     <>
+      <JsonLd data={peopleJsonLd(leaders)} />
+      <Breadcrumbs
+        trail={[
+          { name: "Home", path: "/" },
+          { name: "About", path: "/about" },
+        ]}
+      />
       <PageHeader
         heading={story.heading}
         lede={story.paragraphs[0]}

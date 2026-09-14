@@ -8,11 +8,16 @@ import {
   Rule,
 } from "@/components/primitives";
 import { ProjectPlate } from "@/components/project-plate";
-import { breadcrumbJsonLd } from "@/lib/json-ld";
-import { cta, site } from "@/content/site";
+import { Breadcrumbs, JsonLd } from "@/components/seo";
+import { services } from "@/content/services";
+import { cta } from "@/content/site";
 import { getProject, projects } from "@/content/work";
+import { projectJsonLd } from "@/lib/json-ld";
+import { pageMetadata } from "@/lib/metadata";
 
 type Params = { params: Promise<{ slug: string }> };
+
+export const dynamicParams = false;
 
 export function generateStaticParams() {
   return projects.map((project) => ({ slug: project.slug }));
@@ -24,16 +29,11 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
 
   if (!project) return { title: "Project not found" };
 
-  return {
-    title: project.name,
-    description: `${project.name}, ${project.sector.toLowerCase()}. ${project.summary}`,
-    alternates: { canonical: `/work/${project.slug}` },
-    openGraph: {
-      title: `${project.name} | ${site.shortName}`,
-      description: project.summary,
-      url: `${site.url}/work/${project.slug}`,
-    },
-  };
+  return pageMetadata({
+    title: `${project.name}, ${project.sector.toLowerCase()} case study`,
+    description: `${project.summary} Delivered by Zypa Tech, a software development company in Abuja.`,
+    path: `/work/${project.slug}`,
+  });
 }
 
 export default async function ProjectPage({ params }: Params) {
@@ -45,6 +45,10 @@ export default async function ProjectPage({ params }: Params) {
   const index = projects.findIndex((item) => item.slug === project.slug);
   const next = projects[(index + 1) % projects.length];
 
+  const usedServices = services.filter((service) =>
+    service.relatedWork.includes(project.slug),
+  );
+
   const blocks = [
     { heading: "The challenge", body: project.challenge },
     { heading: "What we built", body: project.built },
@@ -53,17 +57,13 @@ export default async function ProjectPage({ params }: Params) {
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(
-            breadcrumbJsonLd([
-              { name: "Home", path: "/" },
-              { name: "Work", path: "/work" },
-              { name: project.name, path: `/work/${project.slug}` },
-            ]),
-          ),
-        }}
+      <JsonLd data={projectJsonLd(project)} />
+      <Breadcrumbs
+        trail={[
+          { name: "Home", path: "/" },
+          { name: "Work", path: "/work" },
+          { name: project.name, path: `/work/${project.slug}` },
+        ]}
       />
 
       <PageHeader
@@ -84,6 +84,22 @@ export default async function ProjectPage({ params }: Params) {
                   <ArrowLink href={project.liveUrl}>
                     {project.liveUrl.replace(/^https?:\/\//, "")}
                   </ArrowLink>
+                </dd>
+              </div>
+            ) : null}
+            {usedServices.length > 0 ? (
+              <div>
+                <dt className="text-meta text-muted">Services</dt>
+                <dd className="mt-2">
+                  <ul className="space-y-2">
+                    {usedServices.map((service) => (
+                      <li key={service.slug}>
+                        <ArrowLink href={`/services/${service.slug}`}>
+                          {service.title}
+                        </ArrowLink>
+                      </li>
+                    ))}
+                  </ul>
                 </dd>
               </div>
             ) : null}

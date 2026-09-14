@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 import { Lockup } from "./lockup";
+import { services } from "@/content/services";
 import { nav, site } from "@/content/site";
 
 export function Footer() {
@@ -14,14 +15,14 @@ export function Footer() {
     <footer className="bg-charcoal text-white" data-whatsapp-hide>
       <div className="shell pt-16 pb-10 md:pt-20">
         <div className="grid gap-12 md:grid-cols-12 md:gap-10">
-          <div className="md:col-span-4">
+          <div className="md:col-span-3">
             <Lockup height={22} tone="white" />
             <p className="mt-4 max-w-[34ch] text-meta text-muted-dark">
               {site.description}
             </p>
           </div>
 
-          <nav aria-label="Footer" className="md:col-span-3 md:border-l md:border-rule-dark md:pl-8">
+          <nav aria-label="Footer" className="md:col-span-2 md:border-l md:border-rule-dark md:pl-8">
             <h2 className="text-meta font-semibold text-white">Pages</h2>
             <ul className="mt-4 space-y-3">
               {nav.map((item) => (
@@ -37,7 +38,23 @@ export function Footer() {
             </ul>
           </nav>
 
-          <div className="md:col-span-5 md:border-l md:border-rule-dark md:pl-8">
+          <nav aria-label="Services" className="md:col-span-3 md:border-l md:border-rule-dark md:pl-8">
+            <h2 className="text-meta font-semibold text-white">Services</h2>
+            <ul className="mt-4 space-y-3">
+              {services.map((service) => (
+                <li key={service.slug}>
+                  <Link
+                    href={`/services/${service.slug}`}
+                    className="text-meta text-muted-dark transition-colors hover:text-orange"
+                  >
+                    {service.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+
+          <div className="md:col-span-4 md:border-l md:border-rule-dark md:pl-8">
             <h2 className="text-meta font-semibold text-white">Contact</h2>
             <ul className="mt-4 space-y-3 text-meta text-muted-dark">
               <li>
@@ -68,7 +85,7 @@ export function Footer() {
               </li>
             </ul>
 
-            <div className="mt-6 grid gap-6 sm:grid-cols-2">
+            <div className="mt-6 grid gap-6 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2">
               {[site.addresses.office, site.addresses.registered].map(
                 (address) => (
                   <address

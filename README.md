@@ -34,6 +34,8 @@ the Vercel project settings for preview and production.
 | `RESEND_API_KEY` | Yes, for the contact form | Resend API key. Without it the form returns an error state and nothing is sent. Create one at <https://resend.com/api-keys> |
 | `CONTACT_TO_EMAIL` | No | Where enquiries are delivered. Defaults to `techzypa@gmail.com` |
 | `CONTACT_FROM_EMAIL` | No | The sending address. Resend only sends from a verified domain, so this stays on the Resend onboarding sender until `zypatech.online` is verified |
+| `GOOGLE_SITE_VERIFICATION` | No | Token from the Google Search Console HTML tag method. Emits the verification meta tag |
+| `BING_SITE_VERIFICATION` | No | Token from Bing Webmaster Tools. Emits the `msvalidate.01` meta tag |
 | `NEXT_PUBLIC_BOOKING_URL` | No | Cal.com or Calendly link. While it is `TODO` or unset, the contact page points visitors to the form and WhatsApp instead of showing a dead button |
 
 ## Deployment
@@ -59,8 +61,8 @@ wording can be changed without touching a component.
 | File | What it holds |
 |---|---|
 | `site.ts` | Company details, addresses, phone, email, RC number, navigation, WhatsApp, SEO keywords |
-| `home.ts` | Hero, section headings, the pull quote, the closing call to action |
-| `services.ts` | The six services, the five delivery steps, the three engagement models |
+| `home.ts` | Hero, section headings, the pull quote, the general FAQs, the closing call to action |
+| `services.ts` | The six services, including each service page's search title, description, inclusions and FAQs, the five delivery steps, the three engagement models |
 | `work.ts` | The four projects. Client screens are never published; each project is drawn as an abstract plate (`src/components/project-plate.tsx`). `liveUrl` and `result` render only when set |
 | `about.ts` | Company story, leadership, staffing, the commercial assurances |
 | `contact.ts` | Contact page copy, project type options, budget ranges, form labels |
@@ -87,6 +89,9 @@ marker on the page, so nothing silently breaks while they are outstanding.
       `src/content/work.ts`. These are deliberately empty. No figure is
       invented anywhere on this site.
 - [ ] **Booking link.** Set `NEXT_PUBLIC_BOOKING_URL`.
+- [ ] **Search Console.** Verify the domain, set `GOOGLE_SITE_VERIFICATION`, and submit `/sitemap.xml`.
+- [ ] **Google Business Profile.** Create and verify it for the Lugbe office, with the same name, address and phone as the site.
+- [ ] **Content date.** Update `contentUpdated` in `src/content/site.ts` whenever copy changes.
 - [ ] **Resend domain verification** for `zypatech.online`, then update
       `CONTACT_FROM_EMAIL`.
 - [ ] **Confirm the social profile URL** for `@zypatech` in

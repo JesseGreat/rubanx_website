@@ -5,8 +5,9 @@ import "./globals.css";
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 import { WhatsAppButton } from "@/components/whatsapp-button";
+import { JsonLd } from "@/components/seo";
 import { organisationJsonLd } from "@/lib/json-ld";
-import { seoKeywords, site } from "@/content/site";
+import { homeSeo, seoKeywords, site } from "@/content/site";
 
 /*
   No weight array, so next/font serves the variable font: one file covering
@@ -33,24 +34,42 @@ const varelaRound = Varela_Round({
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: `${site.shortName} | Software engineering and product design, Abuja`,
+    default: homeSeo.title,
     template: `%s | ${site.shortName}`,
   },
-  description: site.description,
+  description: homeSeo.description,
+  applicationName: site.shortName,
+  authors: [{ name: site.name, url: site.url }],
+  creator: site.name,
+  publisher: site.name,
+  category: "technology",
   keywords: seoKeywords,
-  alternates: { canonical: "/" },
   openGraph: {
     type: "website",
     locale: "en_NG",
     url: site.url,
     siteName: site.name,
-    title: `${site.shortName} | Software engineering and product design, Abuja`,
-    description: site.description,
+    title: homeSeo.title,
+    description: homeSeo.description,
   },
   twitter: {
     card: "summary_large_image",
-    title: `${site.shortName} | Software engineering and product design, Abuja`,
-    description: site.description,
+    title: homeSeo.title,
+    description: homeSeo.description,
+  },
+  /*
+    Search Console and Bing Webmaster Tools ownership checks. Set the tokens
+    in the environment; nothing is emitted while they are unset.
+  */
+  verification: {
+    google: process.env.GOOGLE_SITE_VERIFICATION || undefined,
+    other: process.env.BING_SITE_VERIFICATION
+      ? { "msvalidate.01": process.env.BING_SITE_VERIFICATION }
+      : undefined,
+  },
+  other: {
+    "geo.region": "NG-FC",
+    "geo.placename": "Abuja",
   },
   robots: {
     index: true,
@@ -87,12 +106,7 @@ export default function RootLayout({
         <main id="main">{children}</main>
         <Footer />
         <WhatsAppButton />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(organisationJsonLd),
-          }}
-        />
+        <JsonLd data={organisationJsonLd} />
       </body>
     </html>
   );

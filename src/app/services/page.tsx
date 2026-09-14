@@ -1,26 +1,35 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 
 import { ButtonLink } from "@/components/button";
-import { PageHeader, Section, SectionHead, Tags } from "@/components/primitives";
+import {
+  ArrowLink,
+  PageHeader,
+  Section,
+  SectionHead,
+  Tags,
+} from "@/components/primitives";
+import { Breadcrumbs } from "@/components/seo";
 import { engagementModels, process, services } from "@/content/services";
-import { cta, site } from "@/content/site";
+import { cta } from "@/content/site";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  title: "Services",
+export const metadata: Metadata = pageMetadata({
+  title: "Software development services in Abuja",
   description:
-    "Custom web applications, mobile apps, business websites and e-commerce, product and UI/UX design, systems integration and support. Built by Zypa Tech in Abuja.",
-  alternates: { canonical: "/services" },
-  openGraph: {
-    title: `Services | ${site.shortName}`,
-    description:
-      "Custom web applications, mobile apps, business websites and e-commerce, product and UI/UX design, systems integration and support.",
-    url: `${site.url}/services`,
-  },
-};
+    "Custom web applications, mobile apps, business websites and e-commerce, UI/UX design, systems integration and support, from a software company in Abuja.",
+  path: "/services",
+});
 
 export default function ServicesPage() {
   return (
     <>
+      <Breadcrumbs
+        trail={[
+          { name: "Home", path: "/" },
+          { name: "Services", path: "/services" },
+        ]}
+      />
       <PageHeader
         heading="What we build"
         lede="Each of these starts with the commercial problem and ends with software your team owns outright and can run without us."
@@ -54,10 +63,22 @@ export default function ServicesPage() {
                   : "md:border-l md:border-rule md:pl-12"
               }`}
             >
-              <h2 className="text-h3 font-semibold">{service.title}</h2>
+              <h2 className="text-h3 font-semibold">
+                <Link
+                  href={`/services/${service.slug}`}
+                  className="transition-colors hover:text-orange-press"
+                >
+                  {service.title}
+                </Link>
+              </h2>
               <p className="measure mt-4 text-ink">{service.body}</p>
               <div className="mt-6">
                 <Tags items={service.tags} />
+              </div>
+              <div className="mt-6">
+                <ArrowLink href={`/services/${service.slug}`}>
+                  {`More on ${service.title.charAt(0).toLowerCase()}${service.title.slice(1)}`}
+                </ArrowLink>
               </div>
             </li>
           ))}
@@ -68,7 +89,7 @@ export default function ServicesPage() {
         The delivery process. This content genuinely is a sequence, which is
         the only place numbered markers appear on this site.
       */}
-      <Section tone="dark" className="mt-20 md:mt-28">
+      <Section tone="dark" id="process" className="mt-20 scroll-mt-20 md:mt-28">
         <SectionHead heading="How a project runs" tone="dark" />
         <ol className="border-t border-rule-dark">
           {process.map((step) => (

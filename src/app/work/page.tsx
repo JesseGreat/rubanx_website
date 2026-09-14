@@ -5,25 +5,27 @@ import { ButtonLink } from "@/components/button";
 import { Chevron } from "@/components/icons";
 import { PageHeader } from "@/components/primitives";
 import { ProjectPlate } from "@/components/project-plate";
-import { cta, site } from "@/content/site";
+import { Breadcrumbs } from "@/components/seo";
+import { cta } from "@/content/site";
 import { projects } from "@/content/work";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  title: "Work",
+export const metadata: Metadata = pageMetadata({
+  title: "Our work: web apps, mobile apps and portals",
   description:
-    "Selected projects from Zypa Tech: SafeBarter, Guzman Career Services, FuelSmart and Curator. Escrow dashboards, client portals, booking systems and mobile apps.",
-  alternates: { canonical: "/work" },
-  openGraph: {
-    title: `Work | ${site.shortName}`,
-    description:
-      "Selected projects from Zypa Tech: escrow dashboards, client portals, booking systems and mobile apps.",
-    url: `${site.url}/work`,
-  },
-};
+    "Selected projects from Zypa Tech in Abuja: SafeBarter, Guzman Career Services, FuelSmart and Curator. Escrow dashboards, client portals, booking systems and mobile apps.",
+  path: "/work",
+});
 
 export default function WorkPage() {
   return (
     <>
+      <Breadcrumbs
+        trail={[
+          { name: "Home", path: "/" },
+          { name: "Work", path: "/work" },
+        ]}
+      />
       <PageHeader
         heading="Selected work"
         lede="Each of these was delivered and handed over to the client. Every one is described in terms of the problem it solved rather than the technology behind it."

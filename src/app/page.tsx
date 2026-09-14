@@ -1,6 +1,9 @@
 import Link from "next/link";
 
+import type { Metadata } from "next";
+
 import { ButtonLink } from "@/components/button";
+import { Faqs } from "@/components/faqs";
 import { Chevron } from "@/components/icons";
 import {
   ArrowLink,
@@ -10,10 +13,18 @@ import {
 } from "@/components/primitives";
 import { ProjectPlate } from "@/components/project-plate";
 import { RevealRule } from "@/components/reveal-rule";
-import { hero, pullQuote, sections } from "@/content/home";
+import { faqs, hero, pullQuote, sections } from "@/content/home";
 import { services } from "@/content/services";
-import { cta, site } from "@/content/site";
+import { cta, homeSeo, site } from "@/content/site";
 import { projects } from "@/content/work";
+import { pageMetadata } from "@/lib/metadata";
+
+export const metadata: Metadata = pageMetadata({
+  title: homeSeo.title,
+  description: homeSeo.description,
+  path: "/",
+  absoluteTitle: true,
+});
 
 const featured = projects.slice(0, 3);
 
@@ -80,7 +91,14 @@ export default function HomePage() {
                 index % 2 === 0 ? "md:pr-12" : "md:border-l md:border-rule md:pl-12"
               }`}
             >
-              <h3 className="text-h3 font-semibold">{service.title}</h3>
+              <h3 className="text-h3 font-semibold">
+                <Link
+                  href={`/services/${service.slug}`}
+                  className="transition-colors hover:text-orange-press"
+                >
+                  {service.title}
+                </Link>
+              </h3>
               <p className="measure mt-3 text-ink">{service.summary}</p>
               <div className="mt-5">
                 <Tags items={service.tags} />
@@ -151,6 +169,8 @@ export default function HomePage() {
           </blockquote>
         </div>
       </section>
+
+      <Faqs faqs={faqs} />
 
       {/* The single warm tint block on this page. */}
       <section className="bg-tint">

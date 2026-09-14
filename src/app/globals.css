@@ -246,3 +246,12 @@ button:focus-visible > .advance {
     transform: scaleX(1);
   }
 }
+
+/* Disclosure marker. A plus that becomes a minus; no motion. */
+.faq summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq[open] .faq-vertical {
+  display: none;
+}

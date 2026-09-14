@@ -64,6 +64,20 @@ export const cta = {
 export const bookingUrl = process.env.NEXT_PUBLIC_BOOKING_URL ?? "TODO";
 export const bookingReady = bookingUrl !== "TODO" && bookingUrl.length > 0;
 
+/**
+ * The date the site's content last changed. Used as lastModified in the
+ * sitemap. Update it when copy changes; search engines stop trusting a date
+ * that moves on every deploy without the content moving with it.
+ */
+export const contentUpdated = "2026-09-14";
+
+/** The home page title and description, written for search. */
+export const homeSeo = {
+  title: "Software development company in Abuja, Nigeria | Zypa Tech",
+  description:
+    "Zypa Tech is a software development company in Abuja. We design and build websites, web applications and mobile apps for businesses across Nigeria.",
+};
+
 export const seoKeywords = [
   "software development company Abuja",
   "web app developers Nigeria",
@@ -71,4 +85,8 @@ export const seoKeywords = [
   "custom software Abuja",
   "product design Nigeria",
   "systems integration Nigeria",
+  "website design company Abuja",
+  "web development company Nigeria",
+  "UI/UX design agency Abuja",
+  "e-commerce website developers Nigeria",
 ];

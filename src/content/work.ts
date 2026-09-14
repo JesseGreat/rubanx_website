@@ -8,19 +8,21 @@ export type Project = {
   built: string;
   outcome: string;
   /**
-   * TODO: client to supply. Until a live URL is provided the detail page
-   * renders an asset-needed marker instead of a dead link.
+   * Only set this when the client has agreed to be linked publicly. When it
+   * is null the detail page simply leaves the row out.
    */
   liveUrl: string | null;
   /**
-   * TODO: client to supply real, measured figures. Left empty on purpose.
+   * Real, measured figures only, and only with the client's agreement. Left
+   * empty on purpose; the detail page hides the block while it is null.
    * No metric is invented anywhere on this site.
    */
   result: { value: string; label: string } | null;
   /**
-   * TODO: client to supply screenshots. Files go in /public/work/<slug>/.
+   * Describes the abstract plate drawn for this project. Client screens are
+   * never published, see src/components/project-plate.tsx.
    */
-  images: { src: string; alt: string }[];
+  plateAlt: string;
 };
 
 export const projects: Project[] = [
@@ -38,7 +40,7 @@ export const projects: Project[] = [
       "Transaction oversight, account management and dispute handling run through one interface, and the record of who did what is available when a transaction is questioned.",
     liveUrl: null,
     result: null,
-    images: [],
+    plateAlt: "Abstract drawing of funds held securely between two parties",
   },
   {
     slug: "guzman-career-services",
@@ -54,7 +56,7 @@ export const projects: Project[] = [
       "The business owns the platform its clients pass through, from first enquiry to delivery, and the marketing site feeds directly into it.",
     liveUrl: null,
     result: null,
-    images: [],
+    plateAlt: "Abstract drawing of scattered tools joined into one path from enquiry to delivery",
   },
   {
     slug: "fuelsmart",
@@ -70,7 +72,7 @@ export const projects: Project[] = [
       "Bookings arrive digitally from both the website and the iOS app, and scheduling and customer records sit in one place rather than in a diary.",
     liveUrl: null,
     result: null,
-    images: [],
+    plateAlt: "Abstract drawing of a booking schedule shared between a website and a mobile app",
   },
   {
     slug: "curator",
@@ -85,7 +87,7 @@ export const projects: Project[] = [
     outcome: "Delivered and handed over to the client.",
     liveUrl: null,
     result: null,
-    images: [],
+    plateAlt: "Abstract drawing of video frames and a review timeline",
   },
 ];
 

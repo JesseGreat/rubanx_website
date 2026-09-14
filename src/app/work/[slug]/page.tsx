@@ -1,14 +1,13 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import { notFound } from "next/navigation";
 
 import { ButtonLink } from "@/components/button";
 import {
   ArrowLink,
-  AssetTodo,
   PageHeader,
   Rule,
 } from "@/components/primitives";
+import { ProjectPlate } from "@/components/project-plate";
 import { breadcrumbJsonLd } from "@/lib/json-ld";
 import { cta, site } from "@/content/site";
 import { getProject, projects } from "@/content/work";
@@ -78,47 +77,45 @@ export default async function ProjectPage({ params }: Params) {
                 {project.sector}
               </dd>
             </div>
-            <div>
-              <dt className="text-meta text-muted">Live site</dt>
-              <dd className="mt-1">
-                {project.liveUrl ? (
+            {project.liveUrl ? (
+              <div>
+                <dt className="text-meta text-muted">Live site</dt>
+                <dd className="mt-1">
                   <ArrowLink href={project.liveUrl}>
                     {project.liveUrl.replace(/^https?:\/\//, "")}
                   </ArrowLink>
-                ) : (
-                  <span className="text-meta font-semibold text-muted">
-                    TODO: live URL to be supplied
-                  </span>
-                )}
+                </dd>
+              </div>
+            ) : null}
+            <div>
+              <dt className="text-meta text-muted">Delivery</dt>
+              <dd className="mt-1 font-semibold text-charcoal">
+                Delivered and handed over
               </dd>
             </div>
           </dl>
         }
       />
 
-      {/* Screenshots. */}
+      {/*
+        The project drawn in outline. Client screens are never published: the
+        product belongs to the client.
+      */}
       <div className="shell">
-        {project.images.length > 0 ? (
-          <div className="grid gap-6 md:grid-cols-2">
-            {project.images.map((image) => (
-              <Image
-                key={image.src}
-                src={image.src}
-                alt={image.alt}
-                width={1120}
-                height={700}
-                sizes="(max-width: 768px) 100vw, 50vw"
-                loading="lazy"
-                className="w-full"
-              />
-            ))}
-          </div>
-        ) : (
-          <AssetTodo
-            label={`${project.name} screenshots. Save them to /public/work/${project.slug}/ and list them in src/content/work.ts`}
-            ratio="aspect-[21/9]"
+        <ProjectPlate
+          slug={project.slug}
+          label={project.plateAlt}
+          tone="dark"
+          ratio="aspect-[16/10] md:aspect-[21/9]"
+        />
+        <p className="mt-4 flex items-start gap-3 text-meta text-muted">
+          <span
+            aria-hidden="true"
+            className="mt-[0.7em] h-[3px] w-6 shrink-0 bg-orange"
           />
-        )}
+          Shown in outline. The product belongs to the client, so we do not
+          publish its screens. A walkthrough can be arranged under NDA.
+        </p>
       </div>
 
       {/* The challenge, what we built, the outcome. */}
@@ -137,22 +134,17 @@ export default async function ProjectPage({ params }: Params) {
         ))}
       </div>
 
-      {/* Measurable result. Left empty on purpose until real figures arrive. */}
-      <div className="shell pt-12 md:pt-16">
-        {project.result ? (
+      {/* Measurable result. Shown only once real, agreed figures exist. */}
+      {project.result ? (
+        <div className="shell pt-12 md:pt-16">
           <div className="bg-tint p-8 md:p-12">
             <p className="text-display font-bold text-charcoal">
               {project.result.value}
             </p>
             <p className="mt-3 text-lede text-ink">{project.result.label}</p>
           </div>
-        ) : (
-          <AssetTodo
-            label={`measurable result for ${project.name}. Add it to the result field in src/content/work.ts. No figure is invented here.`}
-            ratio="min-h-[7rem]"
-          />
-        )}
-      </div>
+        </div>
+      ) : null}
 
       <div className="shell flex flex-wrap items-center justify-between gap-6 py-16 md:py-24">
         <ButtonLink href={cta.primary.href}>

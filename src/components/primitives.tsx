@@ -210,22 +210,3 @@ export function PageHeader({
     </header>
   );
 }
-
-/** An explicit marker for an asset the client still owes us. */
-export function AssetTodo({
-  label,
-  className = "",
-  ratio = "aspect-[16/10]",
-}: {
-  label: string;
-  className?: string;
-  ratio?: string;
-}) {
-  return (
-    <div
-      className={`flex items-center justify-center border border-dashed border-rule-strong p-6 text-center ${ratio} ${className}`}
-    >
-      <span className="text-meta font-semibold text-muted">TODO: {label}</span>
-    </div>
-  );
-}

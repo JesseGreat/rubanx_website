@@ -34,7 +34,7 @@ the Vercel project settings for preview and production.
 | `RESEND_API_KEY` | Yes, for the contact form | Resend API key. Without it the form returns an error state and nothing is sent. Create one at <https://resend.com/api-keys> |
 | `CONTACT_TO_EMAIL` | No | Where enquiries are delivered. Defaults to `techzypa@gmail.com` |
 | `CONTACT_FROM_EMAIL` | No | The sending address. Resend only sends from a verified domain, so this stays on the Resend onboarding sender until `zypatech.online` is verified |
-| `NEXT_PUBLIC_BOOKING_URL` | No | Cal.com or Calendly link. While it is `TODO` or unset, the contact page shows an asset-needed note rather than a dead button |
+| `NEXT_PUBLIC_BOOKING_URL` | No | Cal.com or Calendly link. While it is `TODO` or unset, the contact page points visitors to the form and WhatsApp instead of showing a dead button |
 
 ## Deployment
 
@@ -61,7 +61,7 @@ wording can be changed without touching a component.
 | `site.ts` | Company details, addresses, phone, email, RC number, navigation, WhatsApp, SEO keywords |
 | `home.ts` | Hero, section headings, the pull quote, the closing call to action |
 | `services.ts` | The six services, the five delivery steps, the three engagement models |
-| `work.ts` | The four projects, including the `TODO` slots for screenshots, live URLs and results |
+| `work.ts` | The four projects. Client screens are never published; each project is drawn as an abstract plate (`src/components/project-plate.tsx`). `liveUrl` and `result` render only when set |
 | `about.ts` | Company story, leadership, staffing, the commercial assurances |
 | `contact.ts` | Contact page copy, project type options, budget ranges, form labels |
 

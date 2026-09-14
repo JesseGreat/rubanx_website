@@ -1,15 +1,14 @@
-import Image from "next/image";
 import Link from "next/link";
 
 import { ButtonLink } from "@/components/button";
 import { Chevron } from "@/components/icons";
 import {
   ArrowLink,
-  AssetTodo,
   Section,
   SectionHead,
   Tags,
 } from "@/components/primitives";
+import { ProjectPlate } from "@/components/project-plate";
 import { RevealRule } from "@/components/reveal-rule";
 import { hero, pullQuote, sections } from "@/content/home";
 import { services } from "@/content/services";
@@ -22,7 +21,11 @@ export default function HomePage() {
   return (
     <>
       {/* Hero. Asymmetric split, divided by a full height hairline. */}
-      <section className="shell pt-12 pb-16 md:pt-20 md:pb-24">
+      <section className="shell relative isolate pt-12 pb-16 md:pt-20 md:pb-24">
+        <div
+          aria-hidden="true"
+          className="blueprint absolute inset-y-0 right-0 -z-10 w-full md:w-3/5"
+        />
         <div className="grid gap-10 md:grid-cols-12 md:gap-0">
           <div className="md:col-span-7 md:pr-12 lg:col-span-8 lg:pr-20">
             <h1 className="text-display font-bold">{hero.heading}</h1>
@@ -87,7 +90,7 @@ export default function HomePage() {
         </ul>
       </Section>
 
-      {/* Selected work. Wide rows, images bleeding alternately to each edge. */}
+      {/* Selected work. Wide rows, drawings alternating sides. Client screens are never shown. */}
       <Section topRule>
         <SectionHead heading={sections.work.heading} link={sections.work.link} />
       </Section>
@@ -124,22 +127,7 @@ export default function HomePage() {
                     index % 2 === 1 ? "md:order-1" : ""
                   }`}
                 >
-                  {project.images[0] ? (
-                    <Image
-                      src={project.images[0].src}
-                      alt={project.images[0].alt}
-                      width={1120}
-                      height={700}
-                      sizes="(max-width: 768px) 100vw, 58vw"
-                      loading="lazy"
-                      className="w-full"
-                    />
-                  ) : (
-                    <AssetTodo
-                      label={`${project.name} screenshot`}
-                      ratio="aspect-[16/10]"
-                    />
-                  )}
+                  <ProjectPlate slug={project.slug} label={project.plateAlt} />
                 </div>
               </div>
             </div>
@@ -148,7 +136,11 @@ export default function HomePage() {
       </div>
 
       {/* The one bold typographic moment on the page. */}
-      <section className="bg-charcoal text-white">
+      <section className="relative isolate overflow-hidden bg-charcoal text-white">
+        <div
+          aria-hidden="true"
+          className="blueprint blueprint-dark absolute inset-y-0 right-0 -z-10 w-full md:w-1/2"
+        />
         <div className="shell py-20 md:py-32">
           <RevealRule tone="dark" />
           <blockquote className="mt-12 md:mt-16">

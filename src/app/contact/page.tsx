@@ -56,8 +56,8 @@ export default function ContactPage() {
                   </ButtonLink>
                 </div>
               ) : (
-                <p className="mt-5 border-t border-rule-strong pt-4 text-meta font-semibold text-muted">
-                  TODO: {contactPage.booking.pending}
+                <p className="mt-5 border-t border-rule-strong pt-4 text-meta font-semibold text-charcoal">
+                  {contactPage.booking.pending}
                 </p>
               )}
             </div>

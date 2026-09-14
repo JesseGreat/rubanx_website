@@ -131,6 +131,49 @@
   .measure-lede {
     max-width: 58ch;
   }
+
+  /*
+    Drawing sheet texture. A hairline grid, the same device as the rest of the
+    site at a finer scale. These are lines, not a colour wash: each gradient
+    draws a single 1px stripe per cell.
+  */
+  .plate {
+    --grid-line: rgba(28, 24, 25, 0.06);
+    background-image:
+      linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+      linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+    background-size: 28px 28px;
+    background-position: center;
+  }
+
+  .plate-dark {
+    --grid-line: rgba(255, 255, 255, 0.07);
+  }
+
+  .plate-mark {
+    position: absolute;
+    width: 0.875rem;
+    height: 0.875rem;
+    border-color: var(--color-orange);
+  }
+
+  /*
+    The same grid, loose and fading out, set behind a section as texture.
+    The mask only controls where the lines show; it adds no colour.
+  */
+  .blueprint {
+    --grid-line: rgba(28, 24, 25, 0.07);
+    background-image:
+      linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+      linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+    background-size: 44px 44px;
+    -webkit-mask-image: radial-gradient(ellipse at 80% 40%, #000 20%, transparent 70%);
+    mask-image: radial-gradient(ellipse at 80% 40%, #000 20%, transparent 70%);
+  }
+
+  .blueprint-dark {
+    --grid-line: rgba(255, 255, 255, 0.07);
+  }
 }
 
 /*

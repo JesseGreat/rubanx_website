@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 
 import { ButtonLink } from "@/components/button";
-import { AssetTodo, PageHeader, Section, SectionHead } from "@/components/primitives";
+import { PageHeader, Section, SectionHead } from "@/components/primitives";
 import { assurances, leaders, staffing, story } from "@/content/about";
 import { cta, site } from "@/content/site";
 
@@ -64,10 +64,18 @@ export default function AboutPage() {
                     />
                   </div>
                 ) : (
-                  <AssetTodo
-                    label={`photograph of ${leader.name}`}
-                    ratio="aspect-[4/5]"
-                  />
+                  /* No photograph yet: a quiet monogram, never a visible gap. */
+                  <div
+                    aria-hidden="true"
+                    className="plate flex aspect-[4/5] w-full items-end border border-rule-strong p-5"
+                  >
+                    <span className="text-h2 font-bold text-charcoal">
+                      {leader.name
+                        .split(" ")
+                        .map((part) => part[0])
+                        .join("")}
+                    </span>
+                  </div>
                 )}
               </div>
               <h3 className="mt-6 text-h3 font-semibold">{leader.name}</h3>

@@ -18,7 +18,7 @@ export const contactPage = {
     label: "Book a call",
     // TODO: client to supply the Cal.com or Calendly URL.
     // Set NEXT_PUBLIC_BOOKING_URL in the environment to enable this block.
-    pending: "Booking link to follow. Use the form or WhatsApp in the meantime.",
+    pending: "Use the form or message us on WhatsApp and we will set a time with you.",
   },
   details: {
     heading: "Company details",

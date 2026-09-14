@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 
 import { ButtonLink } from "@/components/button";
 import { Chevron } from "@/components/icons";
-import { AssetTodo, PageHeader } from "@/components/primitives";
+import { PageHeader } from "@/components/primitives";
+import { ProjectPlate } from "@/components/project-plate";
 import { cta, site } from "@/content/site";
 import { projects } from "@/content/work";
 
@@ -61,19 +61,11 @@ export default function WorkPage() {
                     index % 2 === 1 ? "md:order-1" : ""
                   }`}
                 >
-                  {project.images[0] ? (
-                    <Image
-                      src={project.images[0].src}
-                      alt={project.images[0].alt}
-                      width={1120}
-                      height={700}
-                      sizes="(max-width: 768px) 100vw, 58vw"
-                      loading="lazy"
-                      className="w-full"
-                    />
-                  ) : (
-                    <AssetTodo label={`${project.name} screenshot`} />
-                  )}
+                  <ProjectPlate
+                    slug={project.slug}
+                    label={project.plateAlt}
+                    tone={index % 2 === 1 ? "dark" : "light"}
+                  />
                 </div>
               </div>
             </div>
